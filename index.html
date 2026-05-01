@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tran Cong Lam — Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       CUSTOM CURSOR
+  ============================================================ -->
+  <div id="cursor-ring"></div>
+  <div id="cursor-dot"></div>
+
+  <!-- ============================================================
+       BACKGROUND CANVAS
+  ============================================================ -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span>//</span> LAMTC</a>
+      <ul class="nav-links">
+        <li><a href="#about-me">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/l%C3%A2m-tr%E1%BA%A7n-322304325/" target="_blank" rel="noopener"
+            style="display:inline-flex;align-items:center;gap:5px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-status">
+        <span class="status-dot"></span>
+        Passionate about new technologies
+      </div>
+
+      <h1 class="hero-name">
+        <span class="line-1 glitch" data-text="TRAN CONG">TRAN CONG</span>
+        <span class="line-2"><span class="accent-word">LAM</span></span>
+      </h1>
+
+      <p class="hero-role">
+        <span id="typed-text"></span>
+        <span class="type-cursor"></span>
+      </p>
+
+      <p class="hero-desc">
+        Software Engineer crafting enterprise-grade systems with <strong style="color:var(--accent)">.NET</strong>,
+        <strong style="color:var(--accent)">Java</strong> and <strong style="color:var(--accent)">Angular</strong>.
+        Passionate about clean architecture, performance optimization, and shipping software that lasts.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-primary">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+          View My Work
+        </a>
+        <!-- <a href="mailto:lamtc1806@gmail.com" class="btn btn-ghost">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+          Get In Touch
+        </a> -->
+      </div>
+
+      <!-- <div class="hero-stats">
+        <div class="stat-chip">
+          <span class="stat-value">2</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-chip">
+          <span class="stat-value">3</span>
+          <span class="stat-label">Enterprise Projects</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-chip">
+          <span class="stat-value">30%</span>
+          <span class="stat-label">Defect Reduction</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat-chip">
+          <span class="stat-value">3.15</span>
+          <span class="stat-label">GPA / 4.0</span>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      scroll
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT ME — 3 Cards
+  ============================================================ -->
+  <section id="about-me">
+    <div class="container">
+      <p class="section-tag">01 / About Me</p>
+      <h2 class="section-title">My <em>Story</em></h2>
+
+      <div class="aboutme-grid">
+
+        <!-- CARD 1: Who I Am -->
+        <div class="aboutme-card">
+
+          <!-- PLACEHOLDER IMAGE — swap src when ready: -->
+          <img class="aboutme-img-real" src="./images/myself.jpg" alt="👤" />
+
+          <!-- <div class="aboutme-img-placeholder">
+            <span class="placeholder-icon">👤</span>
+            <span class="placeholder-label">your_photo.jpg</span>
+          </div> -->
+          <div class="aboutme-body">
+            <span class="aboutme-eyebrow">Who I Am</span>
+            <h3 class="aboutme-title">Sofrware Engineer &amp; Cloud Enthusiast</h3>
+            <p class="aboutme-desc">
+              As a Sofrware Engineer, I specialize in creating complex backend systems with a focus on scalability,
+              security, and performance. I have experience with large databases and optimizing APIs. Currently, I am
+              expanding my expertise in Cloud Engineering.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2: FPT University -->
+        <div class="aboutme-card">
+
+          <!-- PLACEHOLDER IMAGE — swap src when ready: -->
+          <img class="aboutme-img-real" src="./images/fpt_grad.jpg" alt="🎓" />
+
+          <!-- <div class="aboutme-img-placeholder">
+            <span class="placeholder-icon">🎓</span>
+            <span class="placeholder-label"></span>
+          </div> -->
+
+          <div class="aboutme-body">
+            <span class="aboutme-eyebrow">FPT University</span>
+            <h3 class="aboutme-title">Bachelor of Software Engineering</h3>
+            <p class="aboutme-period">Graduated: May 2025</p>
+            <p class="aboutme-desc">
+              I have successfully graduated from FPT University, majoring in Software Engineering. This environment has
+              shaped my technical foundation and professional mindset.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 3: CSG Communication Club -->
+        <div class="aboutme-card">
+
+          <!-- PLACEHOLDER IMAGE — swap src when ready: -->
+          <img class="aboutme-img-real" src="./images/csg.jpg" alt="🎯" />
+
+          <!-- <div class="aboutme-img-placeholder">
+            <span class="placeholder-icon">🎯</span>
+            <span class="placeholder-label">csg_club.jpg</span>
+          </div> -->
+          <div class="aboutme-body">
+            <span class="aboutme-eyebrow">CSG Communication Club</span>
+            <h3 class="aboutme-title">Vice President — Head of Event Department</h3>
+            <p class="aboutme-period">Oct 2021 — Apr 2025</p>
+            <p class="aboutme-desc">
+              As Vice President – Head of Event Department, I managed project work for Planning and Event Production
+              teams, bringing positive values to the young community through high-impact communication events.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SKILLS
+  ============================================================ -->
+  <section id="skills"
+    style="background: var(--bg-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-tag">02 / Skills</p>
+      <h2 class="section-title">Tech <em>Stack</em></h2>
+      <div class="skills-grid stagger">
+
+        <!-- Backend -->
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <div class="skill-name">Backend Development</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Building robust APIs, services, and
+            server-side systems with enterprise-grade reliability.</p>
+          <div class="tech-logo-grid">
+
+            <!-- Java -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#0074BD"
+                  d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+                <path fill="#EA2D2E"
+                  d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+                <path fill="#0074BD"
+                  d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+                <path fill="#EA2D2E"
+                  d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+                <path fill="#0074BD"
+                  d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+              </svg>
+              Java
+            </span>
+            <!-- C# -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#9B4F96"
+                  d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z" />
+                <path fill="#68217A"
+                  d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z" />
+                <path fill="#fff"
+                  d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h3.3v4.7h-4.2L109 80h-4.9l1.2-6.1h-3.8L100.3 80h-4.8l1.2-6.1h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z" />
+              </svg>
+              C#
+            </span>
+            <!-- ASP.NET / .NET -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M55.07 42.5h18.25l-9.12 23.5z" fill="#813087" />
+                <path d="M0 0h128v128H0z" fill="none" />
+                <path d="M1 64C1 29.1 29.1 1 64 1s63 28.1 63 63-28.1 63-63 63S1 98.9 1 64z" fill="#813087" />
+                <path
+                  d="M23.6 87.3l4.4-2.5c3 5.5 6.5 9.5 12.8 9.5 5.5 0 9-2.7 9-6.6 0-4.6-3.6-6.2-9.6-8.9l-3.3-1.4c-9.5-4-15.8-9.1-15.8-19.7 0-9.8 7.5-17.3 19.2-17.3 8.3 0 14.3 2.9 18.6 10.5l-4.2 2.7c-2.7-4.8-5.7-6.7-10.5-6.7-4.8 0-7.8 3-7.8 7 0 4.9 3 6.9 9.9 9.9l3.3 1.4c11.2 4.8 17.6 9.7 17.6 20.7 0 11.9-9.3 18.2-21.8 18.2-12.2 0-20.1-5.8-24.2-14.7zm44.1 13.6L89 40.3h5.4l-21.3 60.6h-5.4z"
+                  fill="#fff" />
+                <path d="M100 87.2c0-3 2.4-5.3 5.3-5.3s5.3 2.4 5.3 5.3-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3z" fill="#fff" />
+              </svg>
+              ASP.NET
+            </span>
+            <!-- Spring Boot -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path
+                  d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A63.958 63.958 0 0064 0C28.659 0 0 28.659 0 64c0 35.34 28.659 64 64 64 35.34 0 64-28.66 64-64a63.747 63.747 0 00-11.548-37.357zM64 121.317c-31.526 0-57.317-25.791-57.317-57.317S32.474 6.683 64 6.683 121.317 32.474 121.317 64 95.526 121.317 64 121.317z"
+                  fill="#77bc1f" />
+                <path
+                  d="M52.707 78.456c0 5.781-4.696 10.478-10.478 10.478-5.781 0-10.478-4.697-10.478-10.478V52.707c0-5.78 4.697-10.477 10.478-10.477 5.782 0 10.478 4.696 10.478 10.477v25.749zm32.085 0c0 5.781-4.696 10.478-10.478 10.478s-10.478-4.697-10.478-10.478V52.707c0-5.78 4.696-10.477 10.478-10.477s10.478 4.696 10.478 10.477v25.749z"
+                  fill="#77bc1f" />
+              </svg>
+              Spring Boot
+            </span>
+            <!-- REST -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent-2)" stroke-width="1.8">
+                <path
+                  d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+              </svg>
+              RESTful APIs
+            </span>
+            <!-- Razor Pages -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#512BD4" />
+                <path d="M64 10v78M10 40l54 48M118 40L64 88" stroke="#fff" stroke-width="4" stroke-opacity="0.3" /><text
+                  x="50%" y="60%" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold"
+                  font-family="sans-serif" dy=".3em">RZR</text>
+              </svg>
+              Razor Pages
+            </span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-card">
+          <div class="skill-icon">🖥️</div>
+          <div class="skill-name">Frontend Development</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Creating scalable, maintainable UIs with
+            modern frameworks and component architecture.</p>
+          <div class="tech-logo-grid">
+            <!-- Angular -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#DD0031" d="M64 0L3.9 21.6l9.4 81.7L64 128l50.7-24.7 9.4-81.7z" />
+                <path fill="#C3002F" d="M64 0v128l50.7-24.7 9.4-81.7z" />
+                <path fill="#fff"
+                  d="M64 19.7L24.7 109h14.8l7.8-19.4h33.4L88.5 109h14.8L64 19.7zm0 22.6l12.9 32.1H51.1L64 42.3z" />
+              </svg>
+              Angular
+            </span>
+            <!-- TypeScript -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#007ACC"
+                  d="M2 63.91v62.5h125v-125H2zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73l4.6-2.64 3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H57.16v46.23H45.65V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10-.12 22-.1h21.81z" />
+              </svg>
+              TypeScript
+            </span>
+            <!-- HTML5 -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#E44D26" d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198-45.019 12.48z" />
+                <path fill="#F16529" d="M64 116.8l36.378-10.086 8.559-95.878H64z" />
+                <path fill="#EBEBEB"
+                  d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692 3.382 37.927H64zm0 35.743l-.061.017-15.327-4.14-.979-10.975H33.816l1.928 21.609 28.193 7.826.063-.017z" />
+                <path fill="#fff"
+                  d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092.628-6.978.329-3.692z" />
+              </svg>
+              HTML/CSS
+            </span>
+            <!-- SCSS -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#CF649A"
+                  d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zM88.5 82.4c-.4 4.3-2.4 7.6-6.1 9.9-2.8 1.8-6 2.6-9.3 2.9-3.5.3-6.9-.1-10.1-1.4-.5-.2-1-.4-1.4-.7-.1-.1-.3-.2-.5-.4l.1 2.4h-8.3V94.6c0-.2 0-.4-.1-.6l-2.9-15.9c-.1-.5-.2-1-.4-1.4-.2-.4-.5-.7-.9-.8-.4-.1-.9 0-1.3.2-.6.3-1.1.7-1.5 1.3l.9 4.8h-9l-2.5-13.7c.3-.4.6-.8.9-1.2 1.6-2.1 3.4-3.9 5.5-5.4 1.9-1.3 3.9-2.2 6.1-2.4 1.9-.2 3.9 0 5.7.7 1.5.6 2.8 1.5 3.7 2.7.9 1.2 1.4 2.7 1.5 4.2.1 1.7-.2 3.3-1 4.8l1.1 6.2c.4-2.1 1.2-4 2.4-5.7 1.8-2.6 4.2-4.4 7.1-5.4 2.7-.9 5.5-.9 8.2-.1 2.4.7 4.4 2.1 5.9 4.1 1.5 1.9 2.2 4.2 2.2 6.6z" />
+              </svg>
+              SCSS
+            </span>
+          </div>
+        </div>
+
+        <!-- Desktop -->
+        <div class="skill-card">
+          <div class="skill-icon">🪟</div>
+          <div class="skill-name">Desktop Applications</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Modernizing legacy desktop systems into
+            maintainable, performance-driven solutions.</p>
+          <div class="tech-logo-grid">
+            <!-- WPF / .NET -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#512BD4" />
+                <path d="M64 10v78M10 40l54 48M118 40L64 88" stroke="#fff" stroke-width="4" stroke-opacity="0.3" /><text
+                  x="50%" y="60%" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold"
+                  font-family="sans-serif" dy=".3em">.NET</text>
+              </svg>
+              WPF
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#512BD4" /><text x="50%" y="60%"
+                  text-anchor="middle" fill="#fff" font-size="22" font-weight="bold" font-family="sans-serif"
+                  dy=".3em">.NET</text>
+              </svg>
+              WinForms
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#68217A" /><text x="50%" y="60%"
+                  text-anchor="middle" fill="#fff" font-size="18" font-weight="bold" font-family="sans-serif"
+                  dy=".3em">VB</text>
+              </svg>
+              VB.NET
+            </span>
+            <!-- Windows -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#00ADEF" d="M0 0h61v61H0zm67 0h61v61H67zM0 67h61v61H0zm67 0h61v61H67z" />
+              </svg>
+              Windows
+            </span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-card">
+          <div class="skill-icon">🗄️</div>
+          <div class="skill-name">Databases</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Designing schemas, writing performant
+            queries, and working with relational and in-memory stores.</p>
+          <div class="tech-logo-grid">
+            <!-- SQL Server -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#CC2927"
+                  d="M116.231 94.531c0 9.53-23.298 17.255-52.04 17.255-28.74 0-52.038-7.724-52.038-17.255V34.041h104.078v60.49z" />
+                <path fill="#BC1B20"
+                  d="M116.231 64.284c0 9.53-23.298 17.254-52.04 17.254-28.74 0-52.038-7.724-52.038-17.254" />
+                <path fill="#E8423B"
+                  d="M116.231 34.041c0 9.529-23.298 17.254-52.04 17.254-28.74 0-52.038-7.725-52.038-17.254 0-9.528 23.298-17.253 52.039-17.253 28.741 0 52.039 7.725 52.039 17.253z" />
+                <path fill="#fff"
+                  d="M94.228 31.915c0 3.198-13.585 5.791-30.35 5.791-16.763 0-30.348-2.593-30.348-5.791 0-3.199 13.585-5.791 30.348-5.791 16.765 0 30.35 2.592 30.35 5.791z" />
+              </svg>
+              SQL Server
+            </span>
+            <!-- PostgreSQL -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#336791"
+                  d="M117.063 67.063c-2.687-.325-5.344-.264-7.875.119-1.1-4.113-3.025-7.807-5.756-10.851 4.512-7.1 5.737-15.763 3.144-23.556-3.575-10.706-13.406-17.769-25.281-18.294-6.256-.275-12.063 1.438-16.619 4.569-3.956-1.669-8.269-2.506-12.862-2.419-10.544.194-19.988 5.719-25.232 14.506-3.15 5.288-4.232 11.363-3.581 17.344C21.238 50.8 18.907 54.044 17.244 57.8c-.007.012-.012.024-.019.038-.007.018-.014.037-.02.056-.01.025-.022.05-.032.078-.01.024-.017.049-.026.074-.01.028-.022.056-.032.085-.009.025-.015.052-.023.077-.01.031-.022.062-.031.093-.008.025-.013.052-.02.077-.01.032-.021.063-.03.096-.008.025-.013.052-.019.077-.01.033-.02.066-.029.1-.007.025-.012.052-.018.078-.009.034-.019.067-.028.101-.006.025-.01.052-.016.078-.009.034-.018.069-.026.103-.006.025-.009.051-.014.076-.009.036-.018.071-.025.107-.005.024-.008.05-.012.075-.009.037-.018.073-.026.11-.004.024-.007.049-.011.074-.009.038-.018.076-.026.114-.003.023-.006.047-.009.071-.009.04-.018.079-.027.118-.002.022-.005.045-.007.068-.009.041-.018.082-.027.123-.001.021-.004.042-.005.063-.009.043-.018.086-.027.13 0 .019-.002.038-.003.058-.009.047-.018.093-.026.14 0 .015-.001.03-.001.045-.008.048-.017.097-.026.145 0 .013-.001.027-.001.04-.009.052-.017.104-.026.157 0 .01-.001.021-.001.031-.008.053-.016.107-.024.161v.024c-.009.057-.017.115-.025.172v.017c-.008.059-.016.118-.023.178v.01c-.008.061-.015.122-.022.184v.003c-.023.197-.037.396-.044.596-.003.087-.005.175-.005.263 0 .077 0 .155.002.232.001.039.001.078.003.117.002.065.005.13.008.195.003.062.006.124.009.186.004.065.009.13.013.196.005.065.01.13.016.196.006.066.012.131.019.197.007.066.014.132.021.198.008.066.016.132.025.198.009.066.018.132.028.198.01.066.02.132.031.198.011.066.022.132.034.197.012.066.025.131.038.197.013.065.027.13.041.195.015.065.03.13.046.195.017.065.034.129.052.193.019.064.038.128.059.191.021.064.043.127.066.19.024.064.048.127.074.19.027.063.055.126.084.188.03.062.062.124.094.185.034.061.069.121.105.181.037.06.076.119.115.178.04.059.082.118.125.175.045.058.091.115.139.171.049.056.1.112.152.167.053.055.108.109.165.162.058.054.118.107.18.159.064.052.13.104.197.155.069.051.14.101.213.149.074.05.15.098.228.145.08.048.16.095.244.14.083.046.169.089.257.132.086.043.176.084.267.123.09.039.184.077.279.113.095.036.195.072.296.106.1.033.206.065.311.095.104.029.214.057.323.083.11.026.224.051.34.073.115.022.235.043.355.062.12.018.245.035.37.05.125.014.254.027.384.037.13.01.265.019.4.025.135.006.274.01.414.012.14.002.283.002.428 0 .144-.002.292-.007.44-.013.15-.007.3-.016.453-.027.152-.011.308-.024.463-.039.157-.015.316-.032.475-.051.16-.019.323-.04.484-.063.162-.023.327-.048.49-.075.164-.027.33-.056.494-.087.165-.031.332-.064.497-.099.166-.035.334-.072.5-.112.166-.04.334-.082.498-.126.165-.044.33-.09.493-.139.164-.049.326-.1.486-.153.161-.053.319-.108.476-.166.158-.059.312-.119.465-.182.154-.064.304-.129.451-.198.149-.069.293-.139.435-.213.143-.074.282-.15.419-.229.138-.08.272-.162.404-.247.133-.085.261-.172.387-.263.127-.091.251-.184.372-.279.122-.096.24-.194.356-.295.116-.101.228-.204.338-.31.11-.106.217-.214.321-.324.105-.11.205-.222.303-.337.098-.115.192-.232.284-.351.092-.119.18-.24.265-.363.086-.123.168-.249.247-.376.08-.128.156-.257.23-.389.074-.131.144-.264.212-.399.068-.135.133-.271.195-.41.063-.139.123-.279.18-.421.057-.142.111-.285.162-.431.052-.145.1-.291.146-.44.046-.148.09-.297.131-.449.041-.151.079-.303.115-.457.036-.154.07-.308.101-.465.031-.157.06-.314.086-.473.027-.159.051-.318.073-.479.022-.161.041-.323.058-.486.017-.163.032-.327.044-.492.012-.166.022-.332.029-.5.007-.168.012-.337.014-.506.002-.17.001-.34-.002-.51-.003-.171-.009-.341-.017-.512-.008-.171-.019-.342-.031-.513-.013-.171-.028-.342-.044-.513-.017-.171-.036-.342-.057-.513-.021-.17-.044-.341-.069-.511-.025-.17-.053-.339-.082-.508-.03-.168-.062-.336-.096-.503-.034-.167-.07-.333-.108-.499-.038-.165-.079-.329-.121-.492-.043-.163-.089-.325-.136-.486-.048-.161-.098-.321-.15-.48-.053-.158-.108-.316-.165-.472-.058-.156-.119-.31-.181-.463-.063-.153-.128-.305-.196-.455-.069-.15-.14-.298-.213-.446-.074-.147-.151-.293-.23-.437-.08-.144-.162-.286-.246-.427-.085-.14-.172-.279-.263-.415-.09-.136-.184-.271-.279-.403-.096-.133-.196-.264-.298-.393-.103-.13-.21-.257-.319-.382-.109-.125-.222-.248-.337-.369-.116-.12-.235-.238-.357-.354-.122-.116-.248-.23-.376-.341-.128-.111-.259-.22-.394-.326-.135-.106-.273-.21-.414-.311-.142-.101-.287-.2-.435-.295-.149-.096-.3-.189-.455-.279-.155-.089-.314-.176-.475-.259-.162-.083-.327-.163-.495-.239-.168-.076-.339-.149-.513-.219-.174-.069-.351-.135-.532-.197-.18-.062-.363-.12-.549-.174-.186-.054-.374-.104-.565-.15-.19-.046-.383-.088-.578-.126-.195-.038-.393-.072-.592-.102-.2-.03-.401-.056-.604-.077-.202-.021-.407-.038-.612-.051-.205-.013-.412-.021-.62-.025-.208-.004-.416-.004-.625 0z" />
+              </svg>
+              PostgreSQL
+            </span>
+            <!-- Redis -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#D82C20"
+                  d="M121.636 93.261c-6.606 3.44-40.828 17.518-48.088 21.307-7.258 3.789-11.286 3.756-17.01.904-5.725-2.853-42.077-17.405-48.667-20.555-3.295-1.575-5.044-2.894-5.044-4.146V79.42s47.16-10.267 54.793-13.035c7.634-2.768 10.277-2.876 18.815.094 8.537 2.968 46.097 9.52 52.568 11.851v11.07c0 1.244-1.577 2.564-7.367 3.861z" />
+                <path fill="#A41E11"
+                  d="M121.636 82.188c-6.606 3.44-40.828 17.516-48.088 21.305-7.258 3.791-11.286 3.758-17.01.906-5.725-2.853-42.077-17.405-48.667-20.555-6.59-3.15-6.71-5.313-.251-7.799l49.747-19.064c7.634-2.77 10.277-2.877 18.815.094l47.744 16.613c6.603 2.297 4.317 5.06-2.29 8.5z" />
+                <path fill="#D82C20"
+                  d="M121.636 74.588c-6.606 3.441-40.828 17.517-48.088 21.307-7.258 3.789-11.286 3.756-17.01.904-5.725-2.852-42.077-17.404-48.667-20.555-3.295-1.576-5.044-2.894-5.044-4.145V60.758S49.987 50.49 57.62 47.723c7.634-2.768 10.277-2.877 18.815.094 8.537 2.97 46.097 9.521 52.568 11.852v11.07c0 1.243-1.577 2.563-7.367 3.849z" />
+              </svg>
+              Redis
+            </span>
+            <!-- MS Access -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <rect width="128" height="128" rx="8" fill="#BA141A" /><text x="50%" y="58%" text-anchor="middle"
+                  fill="#fff" font-size="40" font-weight="bold" font-family="sans-serif" dy=".3em">Ac</text>
+              </svg>
+              MS Access
+            </span>
+          </div>
+        </div>
+
+        <!-- Cloud & DevOps -->
+        <div class="skill-card">
+          <div class="skill-icon">☁️</div>
+          <div class="skill-name">Cloud & DevOps</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Automating build/release pipelines and
+            deploying cloud-native applications at scale.</p>
+          <div class="tech-logo-grid">
+            <!-- Azure -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="az1" x1="0.5" y1="0.21" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#114A8B" />
+                    <stop offset="1" stop-color="#0669BC" />
+                  </linearGradient>
+                  <linearGradient id="az2" x1="0.5" y1="0.14" x2="0.46" y2="0.86" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#3ccbf4" />
+                    <stop offset="1" stop-color="#198ab3" />
+                  </linearGradient>
+                </defs>
+                <path d="M32.7 4h27.6L33.1 92H5.5L32.7 4z" fill="url(#az1)" />
+                <path d="M60.3 4H90.5L57.6 80.7 32.7 92l27.6-88z" fill="url(#az2)" />
+              </svg>
+              Azure
+            </span>
+            <!-- Azure DevOps -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 96 96" fill="none">
+                <path
+                  d="M0 26.47v42.95l18.62 16.58 30.14-11V85l21.62 2.7L96 71.85V24.85L74.38 8 48.76 20v-9.11L18.62 14.34 0 26.47zm18.62 42.96L8.38 62l10.24-7.79v15.22zm30.14 4.38L24.73 60.46V33.44l24.03 8.93v31.44zm8.38-31.2L36.63 34.2l20.51-9.22 25 8.43-24.89 9.2zM79.48 69.8l-14.13 4.85V50.31L79.48 42v27.8z"
+                  fill="#0078D4" />
+              </svg>
+              Azure DevOps
+            </span>
+            <!-- Docker -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#384D54"
+                  d="M124.8 52.1c-4.3-2.5-10-2.8-14.9-1.4-.6-5.2-4-9.7-7.9-12.9l-1.6-1.3-1.4 1.6c-2.6 3.1-3.4 8.3-3 12.3-1.2-.7-3.2-1.3-4.7-1.6-2.2-.4-4.5-.6-6.7-.1v-2.2H71.2v2.3c0 3.1 0 6.3.1 9.4.1 2.3.1 4.7.1 7H84c0 1.4 0 2.8-.1 4.2H4.3l-.2 1.6c-.5 5.7.1 11.5 2.3 16.7C9 93 13.3 96.3 18.3 98c5.3 1.8 11 2.1 16.5 2 7.3.1 14.7-.8 21.6-3.2 6.9-2.5 13.2-6.5 18.1-12 3.8-4.2 6.7-9.1 8.8-14.4 1 0 1.9.1 2.9.1 5.8 0 11.9-.8 16.8-3.8 4.4-2.7 7.6-7 8.6-12.1l.5-2.5-7.3-4z" />
+                <path fill="#00AADA"
+                  d="M56.6 40H44.9v10.5h11.7zm0-13.7H44.9V36.8h11.7zm-13.9 13.7H31v10.5h11.7zm-13.9 0H17.1v10.5h11.7zm13.9-13.7H31V36.8h11.7zM84 40H72.3v10.5H84zm-13.5 0H58.8v10.5h11.7zm0-13.7H58.8V36.8h11.7z" />
+              </svg>
+              Docker
+            </span>
+            <!-- Git -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#F44D27"
+                  d="M124.742 58.378L69.625 3.26c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.703l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.785-3.778-9.906 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.299 58.094c-3.172 3.172-3.172 8.32 0 11.497l55.126 55.114c3.174 3.174 8.32 3.174 11.499 0l54.818-54.821c3.174-3.176 3.174-8.32 0-11.506z" />
+              </svg>
+              Git
+            </span>
+            <!-- Vercel -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="#fff">
+                <path d="M64 0L128 128H0L64 0z" />
+              </svg>
+              Vercel
+            </span>
+            <!-- Grafana -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <circle cx="64" cy="64" r="64" fill="#F05A28" />
+                <path fill="#fff"
+                  d="M94.8 55.2c-1.1-9.8-8.8-17.5-18.5-18.8-1-.1-2-.2-3-.2-4.4 0-8.4 1.3-11.8 3.5-3.8-5.5-10.1-9.2-17.3-9.2C32.7 30.5 24 39.2 24 49.8c0 1.8.2 3.5.7 5.1C18.5 57.1 14 63 14 70c0 9.2 7.5 16.8 16.8 16.8h62.4c9.2 0 16.8-7.5 16.8-16.8 0-8.5-6.3-15.5-15.2-14.8z" />
+              </svg>
+              Grafana
+            </span>
+          </div>
+        </div>
+
+        <!-- Quality & Testing -->
+        <div class="skill-card">
+          <div class="skill-icon">🧪</div>
+          <div class="skill-name">Quality & Testing</div>
+          <p style="font-size:0.83rem;color:var(--text-muted);line-height:1.6">Ensuring high-quality delivery through
+            systematic testing, monitoring, and code review culture.</p>
+          <div class="tech-logo-grid">
+            <!-- Postman -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <circle cx="64" cy="64" r="64" fill="#FF6C37" />
+                <path fill="#fff"
+                  d="M90.6 37.4C77 23.8 55.2 23.4 41.1 36.6L73 68.5l17.6-31.1zm-49.5.6C27.4 51.7 27.1 73.3 40.3 87l31.9-31.9-31.1-17.1zm49.1 52.6c13.8-13.9 14-36.1 0-50l-31.9 31.9 31.9 18.1zm-50 1.8l17.1-31.1L25.9 93c4.2 4.2 9.3 7.3 14.3-0.6zM65.1 68.5L47.5 86.1c13.9 13.7 36.1 13.5 49.9-.5L65.1 68.5z" />
+              </svg>
+              Postman
+            </span>
+            <!-- Unit Testing -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#28c840" stroke-width="1.8">
+                <path d="M9 12l2 2 4-4" />
+                <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+              </svg>
+              Unit Testing
+            </span>
+            <!-- Regression -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0080ff" stroke-width="1.8">
+                <polyline points="17 1 21 5 17 9" />
+                <path d="M3 11V9a4 4 0 014-4h14" />
+                <polyline points="7 23 3 19 7 15" />
+                <path d="M21 13v2a4 4 0 01-4 4H3" />
+              </svg>
+              Regression
+            </span>
+            <!-- UAT -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="var(--yellow)" stroke-width="1.8">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 00-3-3.87" />
+                <path d="M16 3.13a4 4 0 010 7.75" />
+              </svg>
+              UAT
+            </span>
+            <!-- Stripe (appears in project) -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <rect width="128" height="128" rx="16" fill="#6772E5" />
+                <path fill="#fff"
+                  d="M55.4 47.7c0-3.2 2.6-4.4 6.9-4.4 6.2 0 14 1.9 20.2 5.2V30.8c-6.7-2.7-13.5-3.7-20.2-3.7-16.5 0-27.5 8.6-27.5 23 0 22.5 31 18.9 31 28.5 0 3.8-3.3 5-7.8 5-6.7 0-15.3-2.8-22.1-6.5v18.1c7.5 3.2 15 4.6 22.1 4.6 16.9 0 28.5-8.3 28.5-23 0-24.2-31.1-19.9-31.1-29.1z" />
+              </svg>
+              Stripe
+            </span>
+            <!-- Firebase -->
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#FFA000" d="M23.3 105.7L36.4 19.7 59.9 63.9z" />
+                <path fill="#F57C00" d="M105.7 105.7L93.1 52.9 71.7 95.4z" />
+                <path fill="#FFCA28" d="M93.1 52.9L59.9 63.9 23.3 105.7l69.8-52.8z" />
+                <path fill="#FFA000" d="M23.3 105.7l47.1-82.6L93.1 52.9z" />
+              </svg>
+              Firebase
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE
+  ============================================================ -->
+  <section id="experience">
+    <div class="container">
+      <p class="section-tag">03 / Experience</p>
+      <h2 class="section-title">Work <em>History</em></h2>
+
+      <div class="timeline">
+
+        <!-- Current Job -->
+        <div class="timeline-item">
+          <!-- Company logo row -->
+          <div class="exp-logo-wrap">
+            <div class="exp-logo">
+
+              <!-- Swap with real logo: -->
+              <img src="./images/company/imlink.webp" alt="IMLINK Vietnam logo" />
+            </div>
+            <div class="exp-logo-text">
+              <span class="exp-role">Software Engineer</span>
+              <span class="exp-company">IMLINK VIETNAM Co., Ltd</span>
+            </div>
+            <span class="exp-date">Mar 2025 — Present</span>
+          </div>
+          <p class="exp-desc">
+            Working on enterprise systems for Japanese manufacturing clients including Murata Machinery, Nabari
+            Manufacturing, and Kobayashi Medical System.
+          </p>
+          <ul class="exp-bullets">
+            <li>Participated in Angular & TypeScript frontend framework upgrade, resolving breaking changes and
+              improving maintainability</li>
+            <li>Analyzed business requirements and implemented features using Angular (frontend) and Spring Boot Java
+              (backend)</li>
+            <li>Designed scalable APIs and UI components following clean architecture and OOP principles</li>
+            <li>Refactored legacy WPF/WinForms desktop applications into modern .NET (C#, VB.NET) solutions</li>
+            <li>Performed regression testing and bug-fixing during UAT and production phases, reducing post-upgrade
+              defects by ~30%</li>
+          </ul>
+          <div class="exp-tech-row">
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#DD0031" d="M64 0L3.9 21.6l9.4 81.7L64 128l50.7-24.7 9.4-81.7z" />
+                <path fill="#C3002F" d="M64 0v128l50.7-24.7 9.4-81.7z" />
+                <path fill="#fff"
+                  d="M64 19.7L24.7 109h14.8l7.8-19.4h33.4L88.5 109h14.8L64 19.7zm0 22.6l12.9 32.1H51.1L64 42.3z" />
+              </svg>
+              Angular
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#007ACC"
+                  d="M2 63.91v62.5h125v-125H2zm100.73-5a15.56 15.56 0 017.82 4.5 20.58 20.58 0 013 4c0 .16-5.4 3.81-8.69 5.85-.12.08-.6-.44-1.13-1.23a7.09 7.09 0 00-5.87-3.53c-3.79-.26-6.23 1.73-6.21 5a4.58 4.58 0 00.54 2.34c.83 1.73 2.38 2.76 7.24 4.86 8.95 3.85 12.78 6.39 15.16 10 2.66 4 3.25 10.46 1.45 15.24-2 5.2-6.9 8.73-13.83 9.9a38.32 38.32 0 01-9.52-.1 23 23 0 01-12.72-6.63c-1.15-1.27-3.39-4.58-3.25-4.82a9.34 9.34 0 011.15-.73l4.6-2.64 3.59-2.08.75 1.11a16.78 16.78 0 004.74 4.54c4 2.1 9.46 1.81 12.16-.62a5.43 5.43 0 00.69-6.92c-1-1.39-3-2.56-8.59-5-6.45-2.78-9.23-4.5-11.77-7.24a16.48 16.48 0 01-3.43-6.25 25 25 0 01-.22-8c1.33-6.23 6-10.58 12.82-11.87a31.66 31.66 0 019.49.26zm-29.34 5.24v5.12H57.16v46.23H45.65V69.26H29.38v-5a49.19 49.19 0 01.14-5.16c.06-.08 10-.12 22-.1h21.81z" />
+              </svg>
+              TypeScript
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path
+                  d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A63.958 63.958 0 0064 0C28.659 0 0 28.659 0 64c0 35.34 28.659 64 64 64 35.34 0 64-28.66 64-64a63.747 63.747 0 00-11.548-37.357zM64 121.317c-31.526 0-57.317-25.791-57.317-57.317S32.474 6.683 64 6.683 121.317 32.474 121.317 64 95.526 121.317 64 121.317z"
+                  fill="#77bc1f" />
+                <path
+                  d="M52.707 78.456c0 5.781-4.696 10.478-10.478 10.478-5.781 0-10.478-4.697-10.478-10.478V52.707c0-5.78 4.697-10.477 10.478-10.477 5.782 0 10.478 4.696 10.478 10.477v25.749zm32.085 0c0 5.781-4.696 10.478-10.478 10.478s-10.478-4.697-10.478-10.478V52.707c0-5.78 4.696-10.477 10.478-10.477s10.478 4.696 10.478 10.477v25.749z"
+                  fill="#77bc1f" />
+              </svg>
+              Spring Boot
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#512BD4" />
+                <path d="M64 10v78M10 40l54 48M118 40L64 88" stroke="#fff" stroke-width="4" stroke-opacity="0.3" /><text
+                  x="50%" y="60%" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold"
+                  font-family="sans-serif" dy=".3em">.NET</text>
+              </svg>
+              .NET / C#
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M64 10L10 40v48l54 30 54-30V40L64 10z" fill="#512BD4" />
+                <path d="M64 10v78M10 40l54 48M118 40L64 88" stroke="#fff" stroke-width="4" stroke-opacity="0.3" /><text
+                  x="50%" y="60%" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold"
+                  font-family="sans-serif" dy=".3em">WPF</text>
+              </svg>
+              WPF
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#CC2927"
+                  d="M116.231 94.531c0 9.53-23.298 17.255-52.04 17.255-28.74 0-52.038-7.724-52.038-17.255V34.041h104.078v60.49z" />
+                <path fill="#BC1B20"
+                  d="M116.231 64.284c0 9.53-23.298 17.254-52.04 17.254-28.74 0-52.038-7.724-52.038-17.254" />
+                <path fill="#E8423B"
+                  d="M116.231 34.041c0 9.529-23.298 17.254-52.04 17.254-28.74 0-52.038-7.725-52.038-17.254 0-9.528 23.298-17.253 52.039-17.253 28.741 0 52.039 7.725 52.039 17.253z" />
+                <path fill="#fff"
+                  d="M94.228 31.915c0 3.198-13.585 5.791-30.35 5.791-16.763 0-30.348-2.593-30.348-5.791 0-3.199 13.585-5.791 30.348-5.791 16.765 0 30.35 2.592 30.35 5.791z" />
+              </svg>
+              SQL Server
+            </span>
+          </div>
+          <div class="achievement-badge">🏆 ~30% reduction in post-upgrade defects</div>
+        </div>
+
+        <!-- FPT Software -->
+        <div class="timeline-item">
+          <!-- Company logo row -->
+          <div class="exp-logo-wrap">
+            <div class="exp-logo">
+
+              <!-- Swap with real logo: -->
+              <img src="./images/company/fsoft.svg" alt="FPT Software logo" />
+            </div>
+            <div class="exp-logo-text">
+              <span class="exp-role">Cloud Engineer</span>
+              <span class="exp-company">FPT Software</span>
+            </div>
+            <span class="exp-date">Jan 2024 — Apr 2024</span>
+          </div>
+          <p class="exp-desc">
+            Contributed to the BlueScope Steel Enterprise Application Upgrade project in an Agile, sprint-based
+            international team.
+          </p>
+          <ul class="exp-bullets">
+            <li>Migrated and enhanced enterprise systems to .NET 6, focusing on performance, security, and long-term
+              support</li>
+            <li>Automated build and release workflows using Azure DevOps CI/CD pipelines, improving deployment
+              consistency</li>
+            <li>Ensured reliability through continuous regression testing and post-deployment monitoring</li>
+            <li>Estimated tasks and coordinated with international teammates to deliver sprint features on time</li>
+          </ul>
+          <div class="exp-tech-row">
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128" fill="none">
+                <path d="M55.07 42.5h18.25l-9.12 23.5z" fill="#813087" />
+                <path d="M0 0h128v128H0z" fill="none" />
+                <path d="M1 64C1 29.1 29.1 1 64 1s63 28.1 63 63-28.1 63-63 63S1 98.9 1 64z" fill="#813087" />
+                <path
+                  d="M23.6 87.3l4.4-2.5c3 5.5 6.5 9.5 12.8 9.5 5.5 0 9-2.7 9-6.6 0-4.6-3.6-6.2-9.6-8.9l-3.3-1.4c-9.5-4-15.8-9.1-15.8-19.7 0-9.8 7.5-17.3 19.2-17.3 8.3 0 14.3 2.9 18.6 10.5l-4.2 2.7c-2.7-4.8-5.7-6.7-10.5-6.7-4.8 0-7.8 3-7.8 7 0 4.9 3 6.9 9.9 9.9l3.3 1.4c11.2 4.8 17.6 9.7 17.6 20.7 0 11.9-9.3 18.2-21.8 18.2-12.2 0-20.1-5.8-24.2-14.7zm44.1 13.6L89 40.3h5.4l-21.3 60.6h-5.4z"
+                  fill="#fff" />
+                <path d="M100 87.2c0-3 2.4-5.3 5.3-5.3s5.3 2.4 5.3 5.3-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3z" fill="#fff" />
+              </svg>
+              ASP.NET
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#9B4F96"
+                  d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z" />
+                <path fill="#68217A"
+                  d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z" />
+                <path fill="#fff"
+                  d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h3.3v4.7h-4.2L109 80h-4.9l1.2-6.1h-3.8L100.3 80h-4.8l1.2-6.1h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z" />
+              </svg>
+              C#
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="az1b" x1="0.5" y1="0.21" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#114A8B" />
+                    <stop offset="1" stop-color="#0669BC" />
+                  </linearGradient>
+                  <linearGradient id="az2b" x1="0.5" y1="0.14" x2="0.46" y2="0.86" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#3ccbf4" />
+                    <stop offset="1" stop-color="#198ab3" />
+                  </linearGradient>
+                </defs>
+                <path d="M32.7 4h27.6L33.1 92H5.5L32.7 4z" fill="url(#az1b)" />
+                <path d="M60.3 4H90.5L57.6 80.7 32.7 92l27.6-88z" fill="url(#az2b)" />
+              </svg>
+              Azure
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 96 96" fill="none">
+                <path
+                  d="M0 26.47v42.95l18.62 16.58 30.14-11V85l21.62 2.7L96 71.85V24.85L74.38 8 48.76 20v-9.11L18.62 14.34 0 26.47zm18.62 42.96L8.38 62l10.24-7.79v15.22zm30.14 4.38L24.73 60.46V33.44l24.03 8.93v31.44zm8.38-31.2L36.63 34.2l20.51-9.22 25 8.43-24.89 9.2zM79.48 69.8l-14.13 4.85V50.31L79.48 42v27.8z"
+                  fill="#0078D4" />
+              </svg>
+              Azure DevOps
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <path fill="#F44D27"
+                  d="M124.742 58.378L69.625 3.26c-3.172-3.174-8.32-3.174-11.497 0L46.685 14.703l14.518 14.518c3.375-1.139 7.243-.375 9.932 2.314 2.703 2.706 3.461 6.607 2.294 9.993l13.992 13.993c3.385-1.167 7.292-.413 9.994 2.295 3.78 3.777 3.78 9.9 0 13.679a9.673 9.673 0 01-13.683 0 9.677 9.677 0 01-2.105-10.521L68.574 47.933l-.002 34.341a9.708 9.708 0 012.559 1.828c3.778 3.777 3.778 9.898 0 13.683-3.779 3.777-9.904 3.777-13.679 0-3.778-3.785-3.778-9.906 0-13.683a9.65 9.65 0 013.167-2.11V47.333a9.581 9.581 0 01-3.167-2.111c-2.862-2.86-3.551-7.06-2.083-10.576L41.056 20.333 3.299 58.094c-3.172 3.172-3.172 8.32 0 11.497l55.126 55.114c3.174 3.174 8.32 3.174 11.499 0l54.818-54.821c3.174-3.176 3.174-8.32 0-11.506z" />
+              </svg>
+              Git
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 128 128">
+                <circle cx="64" cy="64" r="64" fill="#FF6C37" />
+                <path fill="#fff"
+                  d="M90.6 37.4C77 23.8 55.2 23.4 41.1 36.6L73 68.5l17.6-31.1zm-49.5.6C27.4 51.7 27.1 73.3 40.3 87l31.9-31.9-31.1-17.1zm49.1 52.6c13.8-13.9 14-36.1 0-50l-31.9 31.9 31.9 18.1zm-50 1.8l17.1-31.1L25.9 93c4.2 4.2 9.3 7.3 14.3-0.6zM65.1 68.5L47.5 86.1c13.9 13.7 36.1 13.5 49.9-.5L65.1 68.5z" />
+              </svg>
+              Postman
+            </span>
+          </div>
+          <div class="achievement-badge">🚀 Successfully upgraded enterprise systems to .NET 6.0</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS
+  ============================================================ -->
+  <section id="projects"
+    style="background: var(--bg-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+    <div class="container">
+      <p class="section-tag">04 / Projects</p>
+      <h2 class="section-title">Featured <em>Work</em></h2>
+
+      <!-- Tab switcher -->
+      <div class="project-tabs">
+        <button class="project-tab-btn active" onclick="switchTab('academic', this)">🎓 Academic Projects</button>
+        <button class="project-tab-btn" onclick="switchTab('extracurricular', this)">🏆 Extracurricular
+          Activities</button>
+      </div>
+
+      <!-- ── ACADEMIC PANEL ── -->
+      <div class="project-panel active" id="panel-academic">
+        <div class="projects-grid">
+
+          <!-- Edu Quest -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+
+              <!-- Swap with real image: -->
+              <img class="project-img-real" src="./images/academicProjects/eduquest.png" alt="Edu Quest" />
+
+              <!-- <div class="project-img-placeholder">
+                <span class="ph-icon">🎓</span>
+                <span class="ph-label">eduquest.jpg</span>
+              </div> -->
+              <div class="project-img-overlay">
+                <div class="overlay-links">
+                  <a href="#" class="overlay-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_01</span>
+                <span class="project-date">Jan – May 2025</span>
+              </div>
+              <h3 class="project-title">Edu Quest</h3>
+              <span class="project-role-badge">Backend Developer</span>
+              <p class="project-desc">
+                Education platform that facilitates the creation and marketing of courses by instructors, as well as the
+                creation of individual learning paths and online courses for learners. The platform supports a personal
+                mascot with captivating items as well as a full accomplishment quest.
+              </p>
+              <div class="project-tech-row">
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128" fill="none">
+                    <path d="M55.07 42.5h18.25l-9.12 23.5z" fill="#813087" />
+                    <path d="M1 64C1 29.1 29.1 1 64 1s63 28.1 63 63-28.1 63-63 63S1 98.9 1 64z" fill="#813087" />
+                    <path
+                      d="M23.6 87.3l4.4-2.5c3 5.5 6.5 9.5 12.8 9.5 5.5 0 9-2.7 9-6.6 0-4.6-3.6-6.2-9.6-8.9l-3.3-1.4c-9.5-4-15.8-9.1-15.8-19.7 0-9.8 7.5-17.3 19.2-17.3 8.3 0 14.3 2.9 18.6 10.5l-4.2 2.7c-2.7-4.8-5.7-6.7-10.5-6.7-4.8 0-7.8 3-7.8 7 0 4.9 3 6.9 9.9 9.9l3.3 1.4c11.2 4.8 17.6 9.7 17.6 20.7 0 11.9-9.3 18.2-21.8 18.2-12.2 0-20.1-5.8-24.2-14.7zm44.1 13.6L89 40.3h5.4l-21.3 60.6h-5.4z"
+                      fill="#fff" />
+                    <path d="M100 87.2c0-3 2.4-5.3 5.3-5.3s5.3 2.4 5.3 5.3-2.4 5.3-5.3 5.3-5.3-2.4-5.3-5.3z"
+                      fill="#fff" />
+                  </svg>
+                  ASP.NET
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#336791"
+                      d="M117.063 67.063c-2.687-.325-5.344-.264-7.875.119-1.1-4.113-3.025-7.807-5.756-10.851 4.512-7.1 5.737-15.763 3.144-23.556-3.575-10.706-13.406-17.769-25.281-18.294-6.256-.275-12.063 1.438-16.619 4.569-3.956-1.669-8.269-2.506-12.862-2.419-10.544.194-19.988 5.719-25.232 14.506-3.15 5.288-4.232 11.363-3.581 17.344C21.238 50.8 18.907 54.044 17.244 57.8c-.007.012-.012.024-.019.038-.007.018-.014.037-.02.056-.01.025-.022.05-.032.078l-.026.074c-.01.028-.022.056-.032.085-.009.025-.015.052-.023.077-.01.031-.022.062-.031.093-.008.025-.013.052-.02.077-.01.032-.021.063-.03.096-.008.025-.013.052-.019.077-.01.033-.02.066-.029.1-.007.025-.012.052-.018.078-.009.034-.019.067-.028.101-.006.025-.01.052-.016.078-.009.034-.018.069-.026.103-.006.025-.009.051-.014.076-.009.036-.018.071-.025.107-.005.024-.008.05-.012.075-.009.037-.018.073-.026.11-.004.024-.007.049-.011.074-.009.038-.018.076-.026.114-.003.023-.006.047-.009.071-.009.04-.018.079-.027.118-.002.022-.005.045-.007.068-.009.041-.018.082-.027.123-.001.021-.004.042-.005.063-.009.043-.018.086-.027.13 0 .019-.002.038-.003.058-.009.047-.018.093-.026.14 0 .015-.001.03-.001.045-.008.048-.017.097-.026.145 0 .013-.001.027-.001.04-.009.052-.017.104-.026.157 0 .01-.001.021-.001.031-.008.053-.016.107-.024.161v.024c-.009.057-.017.115-.025.172v.017c-.008.059-.016.118-.023.178v.01c-.008.061-.015.122-.022.184v.003c-.023.197-.037.396-.044.596-.003.087-.005.175-.005.263 0 .077 0 .155.002.232l.003.117c.002.065.005.13.008.195.003.062.006.124.009.186.004.065.009.13.013.196.005.065.01.13.016.196.006.066.012.131.019.197.007.066.014.132.021.198.008.066.016.132.025.198.009.066.018.132.028.198.01.066.02.132.031.198.011.066.022.132.034.197.012.066.025.131.038.197.013.065.027.13.041.195.015.065.03.13.046.195.017.065.034.129.052.193.019.064.038.128.059.191.021.064.043.127.066.19.024.064.048.127.074.19.027.063.055.126.084.188.03.062.062.124.094.185.034.061.069.121.105.181.037.06.076.119.115.178.04.059.082.118.125.175.045.058.091.115.139.171.049.056.1.112.152.167.053.055.108.109.165.162.058.054.118.107.18.159.064.052.13.104.197.155.069.051.14.101.213.149.074.05.15.098.228.145.08.048.16.095.244.14.083.046.169.089.257.132.086.043.176.084.267.123.09.039.184.077.279.113.095.036.195.072.296.106.1.033.206.065.311.095.104.029.214.057.323.083.11.026.224.051.34.073.115.022.235.043.355.062.12.018.245.035.37.05.125.014.254.027.384.037.13.01.265.019.4.025.135.006.274.01.414.012.14.002.283.002.428 0 .144-.002.292-.007.44-.013.15-.007.3-.016.453-.027.152-.011.308-.024.463-.039.157-.015.316-.032.475-.051.16-.019.323-.04.484-.063.162-.023.327-.048.49-.075.164-.027.33-.056.494-.087.165-.031.332-.064.497-.099.166-.035.334-.072.5-.112.166-.04.334-.082.498-.126.165-.044.33-.09.493-.139.164-.049.326-.1.486-.153.161-.053.319-.108.476-.166.158-.059.312-.119.465-.182.154-.064.304-.129.451-.198.149-.069.293-.139.435-.213.143-.074.282-.15.419-.229.138-.08.272-.162.404-.247.133-.085.261-.172.387-.263.127-.091.251-.184.372-.279.122-.096.24-.194.356-.295.116-.101.228-.204.338-.31.11-.106.217-.214.321-.324.105-.11.205-.222.303-.337.098-.115.192-.232.284-.351.092-.119.18-.24.265-.363.086-.123.168-.249.247-.376.08-.128.156-.257.23-.389.074-.131.144-.264.212-.399.068-.135.133-.271.195-.41.063-.139.123-.279.18-.421.057-.142.111-.285.162-.431.052-.145.1-.291.146-.44.046-.148.09-.297.131-.449.041-.151.079-.303.115-.457.036-.154.07-.308.101-.465.031-.157.06-.314.086-.473.027-.159.051-.318.073-.479.022-.161.041-.323.058-.486.017-.163.032-.327.044-.492.012-.166.022-.332.029-.5.007-.168.012-.337.014-.506.002-.17.001-.34-.002-.51-.003-.171-.009-.341-.017-.512-.008-.171-.019-.342-.031-.513-.013-.171-.028-.342-.044-.513-.017-.171-.036-.342-.057-.513-.021-.17-.044-.341-.069-.511-.025-.17-.053-.339-.082-.508-.03-.168-.062-.336-.096-.503-.034-.167-.07-.333-.108-.499-.038-.165-.079-.329-.121-.492-.043-.163-.089-.325-.136-.486-.048-.161-.098-.321-.15-.48-.053-.158-.108-.316-.165-.472-.058-.156-.119-.31-.181-.463-.063-.153-.128-.305-.196-.455-.069-.15-.14-.298-.213-.446-.074-.147-.151-.293-.23-.437-.08-.144-.162-.286-.246-.427-.085-.14-.172-.279-.263-.415-.09-.136-.184-.271-.279-.403-.096-.133-.196-.264-.298-.393-.103-.13-.21-.257-.319-.382-.109-.125-.222-.248-.337-.369-.116-.12-.235-.238-.357-.354-.122-.116-.248-.23-.376-.341-.128-.111-.259-.22-.394-.326-.135-.106-.273-.21-.414-.311-.142-.101-.287-.2-.435-.295-.149-.096-.3-.189-.455-.279-.155-.089-.314-.176-.475-.259-.162-.083-.327-.163-.495-.239-.168-.076-.339-.149-.513-.219-.174-.069-.351-.135-.532-.197-.18-.062-.363-.12-.549-.174-.186-.054-.374-.104-.565-.15-.19-.046-.383-.088-.578-.126-.195-.038-.393-.072-.592-.102-.2-.03-.401-.056-.604-.077-.202-.021-.407-.038-.612-.051-.205-.013-.412-.021-.62-.025-.208-.004-.416-.004-.625 0z" />
+                  </svg>
+                  PostgreSQL
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#D82C20"
+                      d="M121.636 93.261c-6.606 3.44-40.828 17.518-48.088 21.307-7.258 3.789-11.286 3.756-17.01.904-5.725-2.853-42.077-17.405-48.667-20.555-3.295-1.575-5.044-2.894-5.044-4.146V79.42s47.16-10.267 54.793-13.035c7.634-2.768 10.277-2.876 18.815.094 8.537 2.968 46.097 9.52 52.568 11.851v11.07c0 1.244-1.577 2.564-7.367 3.861z" />
+                    <path fill="#A41E11"
+                      d="M121.636 82.188c-6.606 3.44-40.828 17.516-48.088 21.305-7.258 3.791-11.286 3.758-17.01.906-5.725-2.853-42.077-17.405-48.667-20.555-6.59-3.15-6.71-5.313-.251-7.799l49.747-19.064c7.634-2.77 10.277-2.877 18.815.094l47.744 16.613c6.603 2.297 4.317 5.06-2.29 8.5z" />
+                    <path fill="#D82C20"
+                      d="M121.636 74.588c-6.606 3.441-40.828 17.517-48.088 21.307-7.258 3.789-11.286 3.756-17.01.904-5.725-2.852-42.077-17.404-48.667-20.555-3.295-1.576-5.044-2.894-5.044-4.145V60.758S49.987 50.49 57.62 47.723c7.634-2.768 10.277-2.877 18.815.094 8.537 2.97 46.097 9.521 52.568 11.852v11.07c0 1.243-1.577 2.563-7.367 3.849z" />
+                  </svg>
+                  Redis
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <rect width="128" height="128" rx="16" fill="#6772E5" />
+                    <path fill="#fff"
+                      d="M55.4 47.7c0-3.2 2.6-4.4 6.9-4.4 6.2 0 14 1.9 20.2 5.2V30.8c-6.7-2.7-13.5-3.7-20.2-3.7-16.5 0-27.5 8.6-27.5 23 0 22.5 31 18.9 31 28.5 0 3.8-3.3 5-7.8 5-6.7 0-15.3-2.8-22.1-6.5v18.1c7.5 3.2 15 4.6 22.1 4.6 16.9 0 28.5-8.3 28.5-23 0-24.2-31.1-19.9-31.1-29.1z" />
+                  </svg>
+                  Stripe
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#FFA000" d="M23.3 105.7L36.4 19.7 59.9 63.9z" />
+                    <path fill="#F57C00" d="M105.7 105.7L93.1 52.9 71.7 95.4z" />
+                    <path fill="#FFCA28" d="M93.1 52.9L59.9 63.9 23.3 105.7l69.8-52.8z" />
+                    <path fill="#FFA000" d="M23.3 105.7l47.1-82.6L93.1 52.9z" />
+                  </svg>
+                  Firebase
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#384D54"
+                      d="M124.8 52.1c-4.3-2.5-10-2.8-14.9-1.4-.6-5.2-4-9.7-7.9-12.9l-1.6-1.3-1.4 1.6c-2.6 3.1-3.4 8.3-3 12.3-1.2-.7-3.2-1.3-4.7-1.6-2.2-.4-4.5-.6-6.7-.1v-2.2H71.2v2.3c0 3.1 0 6.3.1 9.4.1 2.3.1 4.7.1 7H84c0 1.4 0 2.8-.1 4.2H4.3l-.2 1.6c-.5 5.7.1 11.5 2.3 16.7C9 93 13.3 96.3 18.3 98c5.3 1.8 11 2.1 16.5 2 7.3.1 14.7-.8 21.6-3.2 6.9-2.5 13.2-6.5 18.1-12 3.8-4.2 6.7-9.1 8.8-14.4 1 0 1.9.1 2.9.1 5.8 0 11.9-.8 16.8-3.8 4.4-2.7 7.6-7 8.6-12.1l.5-2.5-7.3-4z" />
+                    <path fill="#00AADA"
+                      d="M56.6 40H44.9v10.5h11.7zm0-13.7H44.9V36.8h11.7zm-13.9 13.7H31v10.5h11.7zm-13.9 0H17.1v10.5h11.7zm13.9-13.7H31V36.8h11.7zM84 40H72.3v10.5H84zm-13.5 0H58.8v10.5h11.7zm0-13.7H58.8V36.8h11.7z" />
+                  </svg>
+                  Docker
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r="64" fill="#F05A28" />
+                    <path fill="#fff"
+                      d="M94.8 55.2c-1.1-9.8-8.8-17.5-18.5-18.8-1-.1-2-.2-3-.2-4.4 0-8.4 1.3-11.8 3.5-3.8-5.5-10.1-9.2-17.3-9.2C32.7 30.5 24 39.2 24 49.8c0 1.8.2 3.5.7 5.1C18.5 57.1 14 63 14 70c0 9.2 7.5 16.8 16.8 16.8h62.4c9.2 0 16.8-7.5 16.8-16.8 0-8.5-6.3-15.5-15.2-14.8z" />
+                  </svg>
+                  Grafana
+                </span>
+                <span class="tech-pill">
+                  <svg viewBox="0 0 96 96" fill="none">
+                    <defs>
+                      <linearGradient id="az1c" x1="0.5" y1="0.21" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                        <stop offset="0" stop-color="#114A8B" />
+                        <stop offset="1" stop-color="#0669BC" />
+                      </linearGradient>
+                      <linearGradient id="az2c" x1="0.5" y1="0.14" x2="0.46" y2="0.86"
+                        gradientUnits="objectBoundingBox">
+                        <stop offset="0" stop-color="#3ccbf4" />
+                        <stop offset="1" stop-color="#198ab3" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M32.7 4h27.6L33.1 92H5.5L32.7 4z" fill="url(#az1c)" />
+                    <path d="M60.3 4H90.5L57.6 80.7 32.7 92l27.6-88z" fill="url(#az2c)" />
+                  </svg>
+                  Azure
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meeting my lecturers -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+
+              <!-- Swap with real image: -->
+              <img class="project-img-real" src="./images/academicProjects/meetinglecturer.png" alt="Meeting My Lecturers" />
+
+              <!-- <div class="project-img-placeholder">
+                <span class="ph-icon">🎓</span>
+                <span class="ph-label">eduquest.jpg</span>
+              </div> -->
+              <div class="project-img-overlay">
+                <div class="overlay-links">
+                  <a href="#" class="overlay-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_02</span>
+                <span class="project-date">Sep - Nov 2024</span>
+              </div>
+              <h3 class="project-title">Meeting My Lecturers</h3>
+              <span class="project-role-badge">Backend Developer</span>
+              <p class="project-desc">
+                A streamlined meeting management platform that enables users to efficiently schedule, manage, and
+                respond to meetings.
+              </p>
+              <div class="project-tech-row">
+
+                <!-- Java -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#0074BD"
+                      d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+                    <path fill="#EA2D2E"
+                      d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+                    <path fill="#0074BD"
+                      d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+                    <path fill="#EA2D2E"
+                      d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+                    <path fill="#0074BD"
+                      d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+                  </svg>
+                  Java
+                </span>
+
+                <!-- Spring Boot -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#77bc1f"
+                      d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A63.958 63.958 0 0064 0C28.659 0 0 28.659 0 64c0 35.34 28.659 64 64 64 35.34 0 64-28.66 64-64a63.747 63.747 0 00-11.548-37.357z" />
+                    <path fill="#77bc1f"
+                      d="M52.707 78.456c0 5.781-4.696 10.478-10.478 10.478-5.781 0-10.478-4.697-10.478-10.478V52.707c0-5.78 4.697-10.477 10.478-10.477 5.782 0 10.478 4.696 10.478 10.477v25.749z" />
+                  </svg>
+                  Spring Boot
+                </span>
+
+                <!-- Thymeleaf -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r="64" fill="#005F0F" />
+                    <text x="50%" y="58%" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold"
+                      font-family="sans-serif">T</text>
+                  </svg>
+                  Thymeleaf
+                </span>
+
+                <!-- SQL Server -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#CC2927"
+                      d="M116.231 94.531c0 9.53-23.298 17.255-52.04 17.255-28.74 0-52.038-7.724-52.038-17.255V34.041h104.078v60.49z" />
+                    <path fill="#E8423B"
+                      d="M116.231 34.041c0 9.529-23.298 17.254-52.04 17.254-28.74 0-52.038-7.725-52.038-17.254 0-9.528 23.298-17.253 52.039-17.253 28.741 0 52.039 7.725 52.039 17.253z" />
+                  </svg>
+                  SQL Server
+                </span>
+
+                <!-- AWS -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#FF9900" d="M124 95c-20 15-50 20-80 10-5-2-4-5 1-4 30 6 55 2 75-10 3-2 6 1 4 4z" />
+                    <path fill="#232F3E" d="M95 85c3-4 6-10 5-15-1-2-3-2-5-1-3 1-6 4-8 7-1 2 0 3 2 3 2 0 4-1 6-2z" />
+                  </svg>
+                  AWS
+                </span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Mom and Baby -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+
+              <!-- Swap with real image: -->
+              <img class="project-img-real" src="./images/academicProjects/momandbaby.jpg" alt="Mom and Baby" />
+
+              <!-- <div class="project-img-placeholder">
+                <span class="ph-icon">🎓</span>
+                <span class="ph-label">eduquest.jpg</span>
+              </div> -->
+              <div class="project-img-overlay">
+                <div class="overlay-links">
+                  <a href="#" class="overlay-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_03</span>
+                <span class="project-date">May - Jul 2024</span>
+              </div>
+              <h3 class="project-title">Mom and Baby</h3>
+              <span class="project-role-badge">Fullstack Developer</span>
+              <p class="project-desc">
+                A streamlined meeting management platform that enables users to efficiently schedule, manage, and
+                respond to meetings.
+              </p>
+              <div class="project-tech-row">
+
+                <!-- Java -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#0074BD"
+                      d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+                    <path fill="#EA2D2E"
+                      d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+                    <path fill="#0074BD"
+                      d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+                    <path fill="#EA2D2E"
+                      d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+                    <path fill="#0074BD"
+                      d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+                  </svg>
+                  Java
+                </span>
+
+                <!-- Spring Boot -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#77bc1f"
+                      d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A63.958 63.958 0 0064 0C28.659 0 0 28.659 0 64c0 35.34 28.659 64 64 64 35.34 0 64-28.66 64-64a63.747 63.747 0 00-11.548-37.357z" />
+                    <path fill="#77bc1f"
+                      d="M52.707 78.456c0 5.781-4.696 10.478-10.478 10.478-5.781 0-10.478-4.697-10.478-10.478V52.707c0-5.78 4.697-10.477 10.478-10.477 5.782 0 10.478 4.696 10.478 10.477v25.749z" />
+                  </svg>
+                  Spring Boot
+                </span>
+
+                <!-- Thymeleaf -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r="64" fill="#005F0F" />
+                    <text x="50%" y="58%" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold"
+                      font-family="sans-serif">T</text>
+                  </svg>
+                  Thymeleaf
+                </span>
+
+                <!-- SQL Server -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#CC2927"
+                      d="M116.231 94.531c0 9.53-23.298 17.255-52.04 17.255-28.74 0-52.038-7.724-52.038-17.255V34.041h104.078v60.49z" />
+                    <path fill="#E8423B"
+                      d="M116.231 34.041c0 9.529-23.298 17.254-52.04 17.254-28.74 0-52.038-7.725-52.038-17.254 0-9.528 23.298-17.253 52.039-17.253 28.741 0 52.039 7.725 52.039 17.253z" />
+                  </svg>
+                  SQL Server
+                </span>
+
+                <!-- AWS -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#FF9900" d="M124 95c-20 15-50 20-80 10-5-2-4-5 1-4 30 6 55 2 75-10 3-2 6 1 4 4z" />
+                    <path fill="#232F3E" d="M95 85c3-4 6-10 5-15-1-2-3-2-5-1-3 1-6 4-8 7-1 2 0 3 2 3 2 0 4-1 6-2z" />
+                  </svg>
+                  AWS
+                </span>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Event Management -->
+          <div class="project-card">
+            <div class="project-img-wrap">
+
+              <!-- Swap with real image: -->
+              <img class="project-img-real" src="./images/academicProjects/eventManagement.jpg" alt="Event Management" />
+
+              <!-- <div class="project-img-placeholder">
+                <span class="ph-icon">🎓</span>
+                <span class="ph-label">eduquest.jpg</span>
+              </div> -->
+              <div class="project-img-overlay">
+                <div class="overlay-links">
+                  <a href="#" class="overlay-link primary">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                      <polyline points="15 3 21 3 21 9" />
+                      <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    View Project
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_02</span>
+                <span class="project-date">May - Jul 2024</span>
+              </div>
+              <h3 class="project-title">Mom and Baby</h3>
+              <span class="project-role-badge">Fullstack Developer</span>
+              <p class="project-desc">
+                A streamlined meeting management platform that enables users to efficiently schedule, manage, and
+                respond to meetings.
+              </p>
+              <div class="project-tech-row">
+
+                <!-- Java -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#0074BD"
+                      d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z" />
+                    <path fill="#EA2D2E"
+                      d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z" />
+                    <path fill="#0074BD"
+                      d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z" />
+                    <path fill="#EA2D2E"
+                      d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z" />
+                    <path fill="#0074BD"
+                      d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z" />
+                  </svg>
+                  Java
+                </span>
+
+                <!-- Spring Boot -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#77bc1f"
+                      d="M116.452 6.643a59.104 59.104 0 01-6.837 12.136A63.958 63.958 0 0064 0C28.659 0 0 28.659 0 64c0 35.34 28.659 64 64 64 35.34 0 64-28.66 64-64a63.747 63.747 0 00-11.548-37.357z" />
+                    <path fill="#77bc1f"
+                      d="M52.707 78.456c0 5.781-4.696 10.478-10.478 10.478-5.781 0-10.478-4.697-10.478-10.478V52.707c0-5.78 4.697-10.477 10.478-10.477 5.782 0 10.478 4.696 10.478 10.477v25.749z" />
+                  </svg>
+                  Spring Boot
+                </span>
+
+                <!-- Thymeleaf -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <circle cx="64" cy="64" r="64" fill="#005F0F" />
+                    <text x="50%" y="58%" text-anchor="middle" fill="#fff" font-size="42" font-weight="bold"
+                      font-family="sans-serif">T</text>
+                  </svg>
+                  Thymeleaf
+                </span>
+
+                <!-- SQL Server -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#CC2927"
+                      d="M116.231 94.531c0 9.53-23.298 17.255-52.04 17.255-28.74 0-52.038-7.724-52.038-17.255V34.041h104.078v60.49z" />
+                    <path fill="#E8423B"
+                      d="M116.231 34.041c0 9.529-23.298 17.254-52.04 17.254-28.74 0-52.038-7.725-52.038-17.254 0-9.528 23.298-17.253 52.039-17.253 28.741 0 52.039 7.725 52.039 17.253z" />
+                  </svg>
+                  SQL Server
+                </span>
+
+                <!-- AWS -->
+                <span class="tech-pill">
+                  <svg viewBox="0 0 128 128">
+                    <path fill="#FF9900" d="M124 95c-20 15-50 20-80 10-5-2-4-5 1-4 30 6 55 2 75-10 3-2 6 1 4 4z" />
+                    <path fill="#232F3E" d="M95 85c3-4 6-10 5-15-1-2-3-2-5-1-3 1-6 4-8 7-1 2 0 3 2 3 2 0 4-1 6-2z" />
+                  </svg>
+                  AWS
+                </span>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── EXTRACURRICULAR PANEL ── -->
+      <div class="project-panel" id="panel-extracurricular">
+        <div class="extra-list">
+          <!-- Chi Chi Chành Chành -->
+          <div class="extra-card project-card">
+            <div class="extra-img-wrap">
+              <img class="extra-img" src="./images/extraActivities/cccc.jpg" alt="Chi Chi Chành Chành" />
+              <div class="extra-img-shine"></div>
+            </div>
+            <div class="extra-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_01</span>
+                <span class="project-date">Jul – Oct 2022</span>
+              </div>
+              <h3 class="project-title">Chi Chi Chành Chành</h3>
+              <span class="project-role-badge">Subleader Fashion Show - Leader Paperwork</span>
+              <p class="project-desc">
+                Chi Chi Chanh Chanh Cultural Week was first held at FPT University, HCMC with interesting activities imbued with the spirit of national culture, spreading traditional cultural values.
+              </p>
+              <div class="extra-footer">
+                <a href="https://www.facebook.com/photo/?fbid=2262349087254852&set=a.510843517848961" target="_blank" class="overlay-link ghost">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- F-Talent -->
+          <div class="extra-card project-card">
+            <div class="extra-img-wrap">
+              <img class="extra-img" src="./images/extraActivities/ftalent.jpg" alt="F-Talent" />
+              <div class="extra-img-shine"></div>
+            </div>
+            <div class="extra-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_02</span>
+                <span class="project-date">Jul 2022 – Mar 2023</span>
+              </div>
+              <h3 class="project-title">F-Talent</h3>
+              <span class="project-role-badge">Project Sub-leader · Leader Planning</span>
+              <p class="project-desc">
+                The largest student talent search held at FPT University in HCMC, aims to provide young people with a strong platform to showcase their abilities and assist them break through to realize their aspirations.
+              </p>
+              <div class="extra-footer">
+                <a href="https://www.facebook.com/photo/?fbid=2353496501473443&set=a.510843517848961" target="_blank" class="overlay-link ghost">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- LadyLand -->
+          <div class="extra-card project-card">
+            <div class="extra-img-wrap">
+              <img class="extra-img" src="./images/extraActivities/ladyland.jpg" alt="LadyLand" />
+              <div class="extra-img-shine"></div>
+            </div>
+            <div class="extra-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_03</span>
+                <span class="project-date">Jan – Jun 2023</span>
+              </div>
+              <h3 class="project-title">LadyLand</h3>
+              <span class="project-role-badge">Project Leader</span>
+              <p class="project-desc">
+                The project at FPT University HCMC honors women with many interesting and novel activities, along with flashmob dance videos of male representatives from clubs at the school.
+              <div class="extra-footer">
+                <a href="https://www.facebook.com/photo/?fbid=2431634250326334&set=a.510843517848961" target="_blank" class="overlay-link ghost">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SaiGon Talk 8 -->
+          <div class="extra-card project-card">
+            <div class="extra-img-wrap">
+              <img class="extra-img" src="./images/extraActivities/sgtalk.jpg" alt="SaiGon Talk 8" />
+              <div class="extra-img-shine"></div>
+            </div>
+            <div class="extra-body">
+              <div class="project-meta">
+                <span class="project-number">PROJECT_04</span>
+                <span class="project-date">Mar – May 2024</span>
+              </div>
+              <h3 class="project-title">SaiGon Talk 8</h3>
+              <span class="project-role-badge">Event - Planning Supervisor</span>
+              <p class="project-desc">
+                Saigon Talk 8 brings the topic FEELINK — focusing on exploring the potential of EQ in personal career development.
+              </p>
+              <div class="extra-footer">
+                <a href="https://www.facebook.com/photo/?fbid=762407072692603&set=a.762749115991732" target="_blank" class="overlay-link ghost">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                  View Project
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="fade-up">
+          <p class="section-tag">06 / Contact</p>
+          <h2 class="contact-headline">Let's Build Something <em>Together</em></h2>
+          <p class="contact-sub">
+            Whether you have a role in mind, a project to discuss, or just want to connect — I'm always open to a
+            conversation.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:lamtc1806@gmail.com" class="contact-link-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="2,4 12,13 22,4" />
+              </svg>
+              lamtc1806@gmail.com
+            </a>
+            <a href="tel:+84708740713" class="contact-link-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+              +84 708 740 713
+            </a>
+            <a href="https://www.linkedin.com/in/l%C3%A2m-tr%E1%BA%A7n-322304325/" target="_blank" rel="noopener"
+              class="contact-link-item">
+              <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              linkedin.com/in/lâm-trần-322304325
+            </a>
+            <!-- <a href="https://my-portfolio-pearl-delta.vercel.app" target="_blank" class="contact-link-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+              my-portfolio-pearl-delta.vercel.app
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-copy">
+        © 2025 <a href="#">Tran Cong Lam</a>. Built with HTML, CSS & JS.
+      </p>
+      <a href="#home" class="back-top">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+
+</html>
