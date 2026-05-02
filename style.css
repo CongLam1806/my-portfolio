@@ -736,7 +736,7 @@
       background: rgba(0,128,255,0.07);
       border-color: rgba(0,128,255,0.3);
     }
-    }
+    
 
     /* ============================================================
        PROJECT TABS — switcher
@@ -750,6 +750,7 @@
       border-radius: 8px;
       padding: 5px;
       width: fit-content;
+      margin-bottom: 24px;
     }
     .project-tab-btn {
       font-family: var(--font-mono);
