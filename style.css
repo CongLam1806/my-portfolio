@@ -669,6 +669,7 @@
       left: 0;
       color: var(--accent);
     }
+    
     .exp-tech-row {
       display: flex;
       flex-wrap: wrap;
@@ -697,6 +698,44 @@
       padding: 5px 12px;
       border-radius: 2px;
       margin-top: 10px;
+    }
+
+    /* ── New visual highlight styles ── */
+    .exp-bullets .highlight {
+      color: var(--text);
+      font-weight: 700;
+      font-style: normal;
+    }
+    .exp-strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .exp-role-tag {
+      display: inline-block;
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+      border: 1px solid rgba(0,128,255,0.5);
+      color: var(--accent-2);
+      background: rgba(0,128,255,0.08);
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .exp-achievements {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      margin-bottom: 4px;
+    }
+    .achievement-blue {
+      color: var(--accent-2);
+      background: rgba(0,128,255,0.07);
+      border-color: rgba(0,128,255,0.3);
+    }
     }
 
     /* ============================================================
@@ -1809,6 +1848,7 @@
     .t-badge-1 { top: -18px; left: 10%;  animation-delay: 0s; }
     .t-badge-2 { top: -18px; right: 10%; animation-delay: 1.5s; }
     .t-badge-3 { bottom: -18px; left: 20%; animation-delay: 0.8s; }
+    /* .t-badge-4 { bottom: -18px; right: 10%; animation-delay: 0.8s; } */
     @keyframes badgeFloat {
       0%,100% { transform: translateY(0); }
       50%      { transform: translateY(-6px); }

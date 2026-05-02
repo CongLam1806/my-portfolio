@@ -268,8 +268,8 @@
       const phrases = [
         'Software Engineer',
         'Full-Stack Builder',
-        '.NET & Java Specialist',
-        'Cloud Enthusiast'
+        'Java & .NET Specialist',
+        'AI & Cloud Enthusiast'
       ];
       const el = document.getElementById('typed-text');
       let pIdx = 0, cIdx = 0, deleting = false;
@@ -336,6 +336,8 @@
       const sections = document.querySelectorAll('section[id]');
       const links    = document.querySelectorAll('.nav-links a');
 
+      // Use a narrow horizontal band near the top of the viewport
+      // so whichever section crosses that line gets highlighted
       const obs = new IntersectionObserver(entries => {
         entries.forEach(e => {
           if (e.isIntersecting) {
@@ -345,7 +347,10 @@
             });
           }
         });
-      }, { threshold: 0.4 });
+      }, {
+        rootMargin: '-20% 0px -75% 0px',   // fires when section top is in the top 25% of viewport
+        threshold: 0
+      });
 
       sections.forEach(s => obs.observe(s));
     })();
