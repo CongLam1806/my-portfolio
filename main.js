@@ -10,7 +10,132 @@
      7. Smooth Scroll
      8. Project Tab Switcher
 ============================================================ */
+  const profileData = [
+    '{',
+    '  "name": "Tran Cong Lam",',
+    '  "englishName": "Lucas",',
+    '  "role": "Software Engineer",',
+    '  "specialization": "Backend Systems | Event-Driven Architecture | Cloud",',
+    '  "focus": ["Scalability", "Performance Optimization", "Distributed Systems"],',
+    '  "location": "Ho Chi Minh City, Vietnam",',
+    '  "status": "Open to opportunities"',
+    '}'
+  ];
 
+  /* ============================================================
+     TERMINAL JSON TYPEWRITER
+     Renders profileData with VS Code-style syntax highlighting
+  ============================================================ */
+  (function renderTerminalJSON() {
+    const container = document.getElementById('terminal-json');
+    if (!container) return;
+
+    // Token types: brace | key | colon | string | number | bool | null | arr | comma | indent
+    function tokenizeLine(raw) {
+      // raw is a string like '  "name": "Tran Cong Lam",'
+      const tokens = [];
+
+      // Just a brace line: { or }
+      if (/^\s*[\{\}]\s*,?\s*$/.test(raw)) {
+        const indent = raw.match(/^(\s*)/)[1];
+        const brace  = raw.trim().replace(',', '');
+        const comma  = raw.trim().endsWith(',') ? ',' : '';
+        if (indent) tokens.push({ type: 'plain', text: indent });
+        tokens.push({ type: 'brace', text: brace });
+        if (comma) tokens.push({ type: 'comma', text: comma });
+        return tokens;
+      }
+
+      // Array line:  "key": [...]
+      const arrMatch = raw.match(/^(\s*)("[\w\s]+")(\s*:\s*)(\[.*\])(,?)$/);
+      if (arrMatch) {
+        tokens.push({ type: 'plain',  text: arrMatch[1] });
+        tokens.push({ type: 'key',    text: arrMatch[2] });
+        tokens.push({ type: 'colon',  text: arrMatch[3] });
+        // parse the array items
+        tokens.push({ type: 'arr-brace', text: '[' });
+        const inner = arrMatch[4].slice(1, -1); // strip [ ]
+        inner.split(',').forEach((item, i, arr) => {
+          tokens.push({ type: 'string', text: item.trim() });
+          if (i < arr.length - 1) tokens.push({ type: 'comma', text: ', ' });
+        });
+        tokens.push({ type: 'arr-brace', text: ']' });
+        if (arrMatch[5]) tokens.push({ type: 'comma', text: arrMatch[5] });
+        return tokens;
+      }
+
+      // Key: value  (string value)
+      const kvStr = raw.match(/^(\s*)("[\w\s]+")(\s*:\s*)(".*?")(,?)$/);
+      if (kvStr) {
+        tokens.push({ type: 'plain',  text: kvStr[1] });
+        tokens.push({ type: 'key',    text: kvStr[2] });
+        tokens.push({ type: 'colon',  text: kvStr[3] });
+        tokens.push({ type: 'string', text: kvStr[4] });
+        if (kvStr[5]) tokens.push({ type: 'comma', text: kvStr[5] });
+        return tokens;
+      }
+
+      // Key: value  (number / bool / null)
+      const kvOther = raw.match(/^(\s*)("[\w\s]+")(\s*:\s*)([\w\d\.\-]+)(,?)$/);
+      if (kvOther) {
+        tokens.push({ type: 'plain',  text: kvOther[1] });
+        tokens.push({ type: 'key',    text: kvOther[2] });
+        tokens.push({ type: 'colon',  text: kvOther[3] });
+        const val = kvOther[4];
+        const vType = (val === 'true' || val === 'false') ? 'bool'
+                    : (val === 'null') ? 'null'
+                    : (!isNaN(val)) ? 'number' : 'string';
+        tokens.push({ type: vType, text: val });
+        if (kvOther[5]) tokens.push({ type: 'comma', text: kvOther[5] });
+        return tokens;
+      }
+
+      // Fallback: plain text
+      tokens.push({ type: 'plain', text: raw });
+      return tokens;
+    }
+
+    // Color map mimicking VS Code Dark+
+    const colorMap = {
+      brace: '#FF007F',   // Hồng Neon - làm khung sườn nổi bật hẳn
+      'arr-brace': '#FF007F',
+      key: '#00E5FF',   // Cyan sáng - giúp tên thuộc tính cực dễ đọc
+      colon: '#FFFFFF',   // Trắng tinh - phân tách rõ ràng
+      string: '#FFB74D',   // Xanh lá neon dịu - làm giá trị chữ rực rỡ
+      number: '#FFD700',   // Vàng Gold - tạo điểm nhấn cho số liệu
+      bool: '#BD93F9',   // Tím Pastel sáng - cho boolean/null
+      null: '#BD93F9',
+      arr: '#FFFFFF',
+      comma: '#FFFFFF',
+      plain: 'transparent',
+    };
+
+    function buildSpan(token) {
+      const span = document.createElement('span');
+      span.textContent = token.text;
+      if (token.type !== 'plain') {
+        span.style.color = colorMap[token.type] || '#c8d4f0';
+      }
+      return span;
+    }
+
+    // Type out one line at a time with a small stagger
+    let lineDelay = 300; // ms before first line
+    const LINE_GAP = 80; // ms between lines
+
+    profileData.forEach((raw, idx) => {
+      setTimeout(() => {
+        const lineDiv = document.createElement('div');
+        lineDiv.classList.add('tj-line');
+        lineDiv.style.animationDelay = '0ms';
+
+        const tokens = tokenizeLine(raw);
+        tokens.forEach(tok => lineDiv.appendChild(buildSpan(tok)));
+
+        container.appendChild(lineDiv);
+      }, lineDelay + idx * LINE_GAP);
+    });
+  })();
     /* ============================================================
        1. CUSTOM CURSOR
     ============================================================ */
@@ -142,10 +267,8 @@
     (function typewriter() {
       const phrases = [
         'Software Engineer',
-        'Backend Developer',
         'Full-Stack Builder',
         '.NET & Java Specialist',
-        'Angular Craftsman',
         'Cloud Enthusiast'
       ];
       const el = document.getElementById('typed-text');
@@ -259,3 +382,5 @@
     document.querySelectorAll('#panel-academic .project-card').forEach((card, i) => {
       card.style.transitionDelay = `${i * 0.1}s`;
     });
+
+
