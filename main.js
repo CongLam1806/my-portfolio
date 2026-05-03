@@ -299,20 +299,183 @@
 
 
     /* ============================================================
-       4. SCROLL OBSERVER — Animate elements on scroll
+       4. SCROLL OBSERVER — Bidirectional slide-in reveal
+          • Scroll DOWN → element slides in from its assigned direction
+          • Scroll UP   → element slides in from the OPPOSITE direction
+          • Leaving viewport → .visible removed, direction flipped ready
+            for the next entry so the animation always feels "natural"
     ============================================================ */
     (function scrollObserver() {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.12 });
 
-      document.querySelectorAll(
-        '.fade-up, .stagger, .timeline-item, .project-card, .aboutme-card'
-      ).forEach(el => observer.observe(el));
+      /* ── Opposite-direction map ── */
+      const OPPOSITE = {
+        'reveal-up':    'reveal-down',
+        'reveal-down':  'reveal-up',
+        'reveal-left':  'reveal-right',
+        'reveal-right': 'reveal-left',
+        'reveal-scale': 'reveal-scale',
+        'reveal-rotate':'reveal-rotate',
+      };
+
+      /* ── Direction pairs assigned to every element ──
+         el._revealIn  = class used when scrolling DOWN into view
+         el._revealOut = class used when scrolling UP into view      */
+      function assignDirections(el, dirClass) {
+        el._revealIn  = dirClass;
+        el._revealOut = OPPOSITE[dirClass] || dirClass;
+        el.classList.add('reveal', dirClass);   // start hidden in "down" direction
+      }
+
+      /* ── Track last scroll Y so we know scroll direction ── */
+      let lastScrollY = window.scrollY;
+
+      /* ── Core factory — builds one IntersectionObserver ──
+         keepObserving = true  → bidirectional (never unobserves)
+         keepObserving = false → one-shot (for things that should only animate once)
+      ── */
+      function makeObserver(options, keepObserving = true) {
+        return new IntersectionObserver((entries) => {
+          const scrollingDown = window.scrollY >= lastScrollY;
+          lastScrollY = window.scrollY;
+
+          entries.forEach(e => {
+            const el = e.target;
+
+            if (e.isIntersecting) {
+              /* ── Entering viewport ── */
+
+              // Apply the correct slide-in direction for this scroll direction
+              const inClass  = scrollingDown ? el._revealIn  : el._revealOut;
+              const outClass = scrollingDown ? el._revealOut : el._revealIn;
+
+              el.classList.remove(el._revealIn, el._revealOut);
+              el.classList.add(inClass);
+
+              // Apply stagger delay if set
+              const delay = el.dataset.revealDelay
+                ? parseFloat(el.dataset.revealDelay)
+                : (el.dataset.revealIndex ? parseInt(el.dataset.revealIndex) * 0.08 : 0);
+              el.style.transitionDelay = delay + 's';
+
+              el.classList.add('visible');
+
+              if (!keepObserving) this.unobserve(el);
+
+            } else {
+              /* ── Leaving viewport — reset so re-entry animates again ── */
+              // Clear transition delay so the hide is instant
+              el.style.transitionDelay = '0s';
+              el.classList.remove('visible');
+
+              // Pre-position for the NEXT entry:
+              // If element left from below (user scrolled up past it) → come from down next time
+              // If element left from above (user scrolled past it down) → come from up next time
+              // We infer which edge it left from using boundingClientRect
+              const rect = el.getBoundingClientRect();
+              if (rect.top > 0) {
+                // Element is below viewport → next entry will be scroll-down → use _revealIn
+                el.classList.remove(el._revealOut);
+                el.classList.add(el._revealIn);
+              } else {
+                // Element is above viewport → next entry will be scroll-up → use _revealOut
+                el.classList.remove(el._revealIn);
+                el.classList.add(el._revealOut);
+              }
+            }
+          });
+        }, options);
+      }
+
+      /* ── Observer instances ── */
+      const revealObs   = makeObserver({ threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
+      const headingObs  = makeObserver({ threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+      const staggerObs  = makeObserver({ threshold: 0.08 });
+
+      /* ══════════════════════════════════════════════════════════
+         REGISTER ELEMENTS — same assignments as before
+      ══════════════════════════════════════════════════════════ */
+
+      // Section tags → slide from left
+      document.querySelectorAll('.section-tag').forEach(el => {
+        assignDirections(el, 'reveal-left');
+        headingObs.observe(el);
+      });
+
+      // Section titles → slide up, delayed 100ms after tag
+      document.querySelectorAll('.section-title').forEach(el => {
+        assignDirections(el, 'reveal-up');
+        el.dataset.revealDelay = '0.1';
+        headingObs.observe(el);
+      });
+
+      // About-me cards → slide up, staggered
+      document.querySelectorAll('.aboutme-card').forEach((el, i) => {
+        assignDirections(el, 'reveal-up');
+        el.dataset.revealIndex = i;
+        revealObs.observe(el);
+      });
+
+      // Skill cards → alternate left / right
+      document.querySelectorAll('.skill-card').forEach((el, i) => {
+        assignDirections(el, i % 2 === 0 ? 'reveal-left' : 'reveal-right');
+        el.dataset.revealIndex = i;
+        revealObs.observe(el);
+      });
+
+      // Timeline items → slide from left, staggered
+      document.querySelectorAll('.timeline-item').forEach((el, i) => {
+        assignDirections(el, 'reveal-left');
+        el.dataset.revealDelay = (i * 0.15).toString();
+        revealObs.observe(el);
+      });
+
+      // Academic project items → natural side (left normal, right reversed)
+      document.querySelectorAll('.acad-project-item').forEach(el => {
+        assignDirections(el, el.classList.contains('acad-reverse') ? 'reveal-right' : 'reveal-left');
+        el.dataset.revealDelay = '0';
+        revealObs.observe(el);
+      });
+
+      // Extra / extracurricular cards → slide up, staggered
+      document.querySelectorAll('.extra-card').forEach((el, i) => {
+        assignDirections(el, 'reveal-up');
+        el.dataset.revealIndex = i;
+        revealObs.observe(el);
+      });
+
+      // Contact columns → split reveal (left←, right→)
+      const contactLeft  = document.querySelector('.contact-left');
+      const contactRight = document.querySelector('.contact-right');
+      if (contactLeft)  {
+        assignDirections(contactLeft, 'reveal-left');
+        revealObs.observe(contactLeft);
+      }
+      if (contactRight) {
+        assignDirections(contactRight, 'reveal-right');
+        contactRight.dataset.revealDelay = '0.15';
+        revealObs.observe(contactRight);
+      }
+
+      // Education cards
+      document.querySelectorAll('.edu-card').forEach((el, i) => {
+        assignDirections(el, 'reveal-up');
+        el.dataset.revealIndex = i;
+        revealObs.observe(el);
+      });
+
+      // Generic .fade-up fallback
+      document.querySelectorAll('.fade-up:not(.reveal)').forEach(el => {
+        assignDirections(el, 'reveal-up');
+        revealObs.observe(el);
+      });
+
+      // Stagger containers
+      document.querySelectorAll('.stagger').forEach(el => {
+        el._revealIn  = 'reveal-up';
+        el._revealOut = 'reveal-down';
+        staggerObs.observe(el);
+      });
+
     })();
 
 
