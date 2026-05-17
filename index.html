@@ -323,6 +323,16 @@
               </svg>
               Thymeleaf
             </span>
+            <!-- RabbitMQ -->
+            <span class="tech-pill"><svg viewBox="0 0 128 128">
+                    <rect width="128" height="128" rx="16" fill="#FF6600" />
+                    <rect x="20" y="48" width="30" height="32" rx="4" fill="#fff" />
+                    <rect x="49" y="20" width="30" height="32" rx="4" fill="#fff" />
+                    <rect x="78" y="48" width="30" height="32" rx="4" fill="#fff" />
+                    <circle cx="37" cy="40" r="6" fill="#FF6600" />
+                    <circle cx="66" cy="12" r="6" fill="#FF6600" />
+                    <circle cx="95" cy="40" r="6" fill="#FF6600" />
+                  </svg>RabbitMQ</span>
           </div>
         </div>
 
@@ -681,48 +691,41 @@
           </div>
 
           <p class="exp-desc">
-            Working on <span class="hw-company">enterprise-grade B2B systems</span> for Japanese manufacturing
+            Working on large-Scale B2B order management system for manufacturing
             clients — in a bilingual (JP/EN) development environment.
+            
           </p>
 
           <ul class="exp-bullets">
             <li>
-              <span class="hw-action">Built and enhanced</span> a large-scale order management system using
-              <span class="hw-tech">Java 17</span>, <span class="hw-tech">Spring Boot</span>,
-              <span class="hw-tech">Angular (TypeScript)</span>, and <span class="hw-tech">Microsoft Access</span>,
-              delivering end-to-end features across multiple service domains.
+              Core Backend Development: Developed core features for high-impact modules (<span class="hl-action">Leasing and
+                RBAC</span>) using <span class="hl-action">Java 17 and Spring Boot</span>.
             </li>
             <li>
-              <span class="hw-action">Designed and implemented</span> scalable
-              <span class="hw-tech">RESTful APIs</span> applying
-              <span class="hw-tech">OOP</span> and <span class="hw-tech">SOLID principles</span>,
-              ensuring maintainability and extensibility across <span class="hw-impact">4+ modules</span>.
-            </li>
-             <li>
-              <span class="hw-action">Delivered backend features</span> with <span class="hw-tech">ASP.NET Core</span> including
-              <span class="hw-impact">asynchronous processing</span>, covering
-              e-commerce, leasing, accounting, and <span class="hw-impact">RBAC</span> modules.
-            </li>
-             <li>
-              <span class="hw-action">Optimized database queries</span>, improving
-              <span class="hw-impact"> response time</span> and ensuring
-              <span class="hw-impact"> stable performance</span> under high-concurrency scenarios.
+              API Design & SOLID: Designed and implemented scalable <span class="hl-action">RESTful APIs</span> applying <span
+                class="hl-action">OOP/SOLID</span> principles to ensure enterprise-grade maintainability and seamless system
+              integration.
             </li>
             <li>
-              <span class="hw-action">Led frontend upgrades</span> with
-              <span class="hw-tech">Angular / TypeScript</span> and
-              <span class="hw-action">resolved critical production issues</span> through
-              root-cause analysis across frontend, backend, and database layers.
+              Performance Tuning: Optimized database queries and <span class="hl-action">Spring Data JPA</span> mapping, ensuring
+              system stability under <span class="hl-action">high-concurrency</span> workloads.
             </li>
-           
+            <li>
+              Async Processing: Implemented <span class="hl-action">asynchronous execution</span> patterns in Spring Boot to
+              minimize thread blocking and boost system <span class="hl-action">throughput</span>.
+            </li>
+            <li>
+              Full-Stack Ownership: Modernized frontend with <span class="hl-action">Angular & TypeScript</span>; drove end-to-end
+              <span class="hl-action">root-cause analysis</span> to resolve critical production issues.
+            </li>
           </ul>
 
           <!-- Achievement badge row -->
-          <div class="exp-achievements">
+          <!-- <div class="exp-achievements">
             <span class="achievement-badge">🏆 Enhanced system reliability through effective debugging, root cause
               analysis, and timely issue resolution</span>
             <span class="achievement-badge achievement-blue">📦 4+ business modules delivered</span>
-          </div>
+          </div> -->
 
           <div class="exp-tech-row">
             <!-- Java -->
@@ -843,38 +846,38 @@
           </div>
 
           <p class="exp-desc">
-            Contributed to the <span class="hw-company">BlueScope Steel Enterprise Application Upgrade</span> —
+            Contributed to the enterprise application upgrade —
             a large-scale international project.
           </p>
 
           <ul class="exp-bullets">
             <li>
               <span class="hw-action">Delivered sprint features</span> within an international
-              <span class="hw-impact">Agile team</span> on a mission-critical steel manufacturing system,
+              Agile team on a mission-critical steel manufacturing system,
               collaborating with cross-functional stakeholders across distributed environments.
             </li>
             <li>
               <span class="hw-action">Migrated legacy enterprise systems</span> to
-              <span class="hw-tech">.NET 6</span>, resolving deep compatibility issues while improving
-              <span class="hw-impact">performance, security, and long-term maintainability</span>.
+              .NET 6, resolving deep compatibility issues while improving
+              performance, security, and long-term maintainability.
             </li>
             <li>
               <span class="hw-action">Automated CI/CD pipelines</span> using
-              <span class="hw-tech">Azure DevOps</span>, standardizing build &amp; release processes and
+              Azure DevOps, standardizing build &amp; release processes and
               eliminating manual deployment errors across multiple environments.
             </li>
             <li>
-              Ensured <span class="hw-impact">production reliability</span> through
+              Ensured production reliability through
               <span class="hw-action">regression testing, root-cause analysis</span>, and post-deployment
               monitoring — proactively closing quality gaps before they reached end users.
             </li>
           </ul>
 
-          <div class="exp-achievements">
+          <!-- <div class="exp-achievements">
             <span class="achievement-badge">🚀 Successfully upgraded enterprise systems to .NET 6.0</span>
             <span class="achievement-badge achievement-blue">✅ Zero critical regressions across all sprint
               releases</span>
-          </div>
+          </div> -->
 
           <div class="exp-tech-row">
             <!-- ASP.NET -->
@@ -1000,28 +1003,23 @@
                 FPT University to schedule, manage, and respond to appointments in real time.</p>
               <ul class="acad-bullets">
                 <li>
-                  <span class="hl-action">Designed and built a production-ready RESTful API layer</span> using
-                  <span class="hl-tech">Java Spring Boot</span>, implementing <span class="hl-tech">OOP / SOLID principles</span> for scalable and extensible system design
+                  <span class="hl-action">API Design & SOLID</span>: Built a production-ready <span class="hl-action">RESTful
+                    API</span> using <span class="hl-action">Java Spring Boot</span>, applying <span
+                    class="hl-action">OOP/SOLID</span> principles for an extensible system.
                 </li>
                 <li>
-                  <span class="hl-action">Secured the entire platform</span> with
-                  <span class="hl-tech">OAuth 2.0 (Google SSO)</span> and delivered
-                  <span class="hl-impact">real-time push notifications</span> via
-                  <span class="hl-tech">Firebase Realtime Database</span>,
-                  enabling instant meeting-status updates for both students and lecturers
+                  <span class="hl-action">Message Broker</span>: Utilized <span class="hl-action">RabbitMQ</span> to handle
+                  asynchronous appointment workflows, decoupling intensive downstream tasks like email delivery.
                 </li>
-                <!-- <li>
-                  <span class="hl-action">Boosted backend throughput</span> by applying a
-                  <span class="hl-tech">Redis Cache-Aside strategy</span> on high-frequency timetable
-                  queries and decoupling notification workflows with
-                  <span class="hl-tech">RabbitMQ</span> — cutting database round-trips under concurrent load
-                </li> -->
                 <li>
-                  <span class="hl-action">Containerized and deployed</span> the full stack via
-                  <span class="hl-tech">Docker</span> on <span class="hl-tech">AWS</span> with
-                  <span class="hl-tech">SQL Server</span>, integrating
-                  <span class="hl-impact">async email delivery</span> through Spring Mail
-                  for reliable, zero-downtime event handling in a cloud environment
+                  <span class="hl-action">Security & Real-time</span>: Secured the platform with <span class="hl-action">OAuth
+                    2.0</span> (<span class="hl-action">Google SSO</span>) and integrated <span class="hl-action">Firebase</span> for
+                  instant meeting-status push notifications.
+                </li>
+                <li>
+                  <span class="hl-action">Cloud & DevOps</span>: Containerized the full stack via <span
+                    class="hl-action">Docker</span> and deployed on <span class="hl-action">AWS</span> (<span
+                    class="hl-action">EC2/RDS</span>) with <span class="hl-action">SQL Server</span>, ensuring high availability.
                 </li>
               </ul>
               <div class="acad-tech-row project-tech-row">
@@ -1063,7 +1061,7 @@
                 <!-- <span class="tech-pill"><svg viewBox="0 0 128 128">
                     <path fill="#D82C20"
                       d="M121.636 93.261c-6.606 3.44-40.828 17.518-48.088 21.307-7.258 3.789-11.286 3.756-17.01.904-5.725-2.853-42.077-17.405-48.667-20.555-3.295-1.575-5.044-2.894-5.044-4.146V79.42s47.16-10.267 54.793-13.035c7.634-2.768 10.277-2.876 18.815.094 8.537 2.968 46.097 9.52 52.568 11.851v11.07c0 1.244-1.577 2.564-7.367 3.861z" />
-                  </svg>Redis</span>
+                  </svg>Redis</span> -->
                 <span class="tech-pill"><svg viewBox="0 0 128 128">
                     <rect width="128" height="128" rx="16" fill="#FF6600" />
                     <rect x="20" y="48" width="30" height="32" rx="4" fill="#fff" />
@@ -1072,7 +1070,7 @@
                     <circle cx="37" cy="40" r="6" fill="#FF6600" />
                     <circle cx="66" cy="12" r="6" fill="#FF6600" />
                     <circle cx="95" cy="40" r="6" fill="#FF6600" />
-                  </svg>RabbitMQ</span> -->
+                  </svg>RabbitMQ</span>
                 <span class="tech-pill"><svg viewBox="0 0 128 128">
                     <path fill="#384D54"
                       d="M124.8 52.1c-4.3-2.5-10-2.8-14.9-1.4-.6-5.2-4-9.7-7.9-12.9l-1.6-1.3-1.4 1.6c-2.6 3.1-3.4 8.3-3 12.3-1.2-.7-3.2-1.3-4.7-1.6-2.2-.4-4.5-.6-6.7-.1v-2.2H71.2v2.3c0 3.1 0 6.3.1 9.4.1 2.3.1 4.7.1 7H84c0 1.4 0 2.8-.1 4.2H4.3l-.2 1.6c-.5 5.7.1 11.5 2.3 16.7C9 93 13.3 96.3 18.3 98c5.3 1.8 11 2.1 16.5 2 7.3.1 14.7-.8 21.6-3.2 6.9-2.5 13.2-6.5 18.1-12 3.8-4.2 6.7-9.1 8.8-14.4 1 0 1.9.1 2.9.1 5.8 0 11.9-.8 16.8-3.8 4.4-2.7 7.6-7 8.6-12.1l.5-2.5-7.3-4z" />
@@ -1134,23 +1132,26 @@
                 build personal paths. Features gamified mascot quests and reward items.</p>
               <ul class="acad-bullets">
                 <li>
-                  <span class="hl-action">Architected a layered ASP.NET Core backend</span> (Clean Architecture) with
-                  <span class="hl-tech">OAuth 2.0</span> authentication,
-                  ensuring maintainability and secure user onboarding
+                  <span class="hl-action">Architecture & Auth</span>: Architected a layered backend (<span class="hl-action">Clean
+                    Architecture</span>) with <span class="hl-action">OAuth 2.0 / JWT</span>, ensuring secure user onboarding and
+                  system maintainability.
                 </li>
                 <li>
-                  <span class="hl-action">Improved throughput</span> using <span class="hl-tech">Redis caching</span> for course catalog and
-                  leaderboard queries, reducing response latency under high load
+                  <span class="hl-action">Performance Optimization</span>: Improved throughput and reduced latency under high load
+                  using <span class="hl-action">Redis caching</span> for course catalog and leaderboard queries.
                 </li>
                 <li>
-                  Designed an <span class="hl-tech">event-driven architecture</span> for asynchronous
-                  enrollment and achievement processing, integrating
-                  <span class="hl-tech">Stripe webhooks</span> for <span class="hl-impact">reliable payment confirmation</span>
+                  <span class="hl-action">Event-Driven & Payment</span>: Designed an <span class="hl-action">event-driven
+                    architecture</span> for async enrollment, integrating <span class="hl-action">Stripe webhooks</span> for <span
+                    class="hl-action">idempotent</span> transaction processing.
                 </li>
                 <li>
-                  <span class="hl-action">Deployed a cloud-native system on Azure</span> with
-                  <span class="hl-tech">Docker</span> and CI/CD via Azure DevOps,
-                  incorporating <span class="hl-impact">Grafana monitoring</span> for real-time observability
+                  <span class="hl-action">Cloud & DevOps</span>: Deployed a cloud-native system on <span class="hl-action">Azure with
+                    Docker</span>; automated deployment via <span class="hl-action">GitHub Actions</span> (CI/CD).
+                </li>
+                <li>
+                  <span class="hl-action">Observability</span>: Set up centralized logging by streaming server-side errors to <span
+                    class="hl-action">Loki</span>, enabling real-time log querying and system monitoring.
                 </li>
               </ul>
               <div class="acad-tech-row project-tech-row">
