@@ -13,7 +13,7 @@
   const profileData = [
     '{',
     '  "name": "Tran Cong Lam",',
-    '  "englishName": "Lucas",',
+    '  "englishName": "Jimmy",',
     '  "role": "Software Engineer",',
     '  "specialization": "Backend Systems | Event-Driven Architecture | Cloud",',
     '  "focus": ["Scalability", "Performance Optimization", "Distributed Systems"],',
