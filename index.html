@@ -695,7 +695,7 @@
           </div>
 
           <p class="exp-desc">
-            Working on large-Scale B2B order management system for manufacturing
+            Working on large-Scale enterprise management system for manufacturing
             clients — in a bilingual (JP/EN) development environment.
             
           </p>
@@ -705,7 +705,12 @@
               Successfully deployed and integrated new core features across the company's shared codebase - reused across 2+ interconnected B2B sub-projects - using <span class="hl-action">Angular</span>, <span class="hl-action">Java 17</span>, and <span class="hl-action">Spring Boot</span>, rapidly adapting to different sub-project codebases, each with its own business domain and data model, to deliver complex business logic on schedule.
             </li>
             <li>
-              Performed the technical version upgrade of legacy enterprise systems across 2 distinct sub-projects -<span class="hl-action">migrating the backend from Kotlin to Java 17 and the frontend to Angular 17</span>; conducted comprehensive end-to-end debugging and root-cause analysis across both layers to ensure system stability and correct functionality post-migration.
+              Supported the technical version upgrade of legacy enterprise systems across 2 distinct sub-projects (<span class="hl-action">Kotlin to Java 17</span>, <span class="hl-action">old version Angular to Angular 17</span>), conducting comprehensive <span class="hl-action">end-to-end debugging and root-cause analysis</span>  across both
+layers to ensure system stability post-migration.
+            </li>
+            <li>
+              Delivered code changes through an <span class="hl-action">AWS-based CI/CD pipeline</span> (CodeCommit, CodeBuild, Amazon ECS), gaining working
+exposure to cloud-native deployment workflows.
             </li>
             <li>
               Optimized JPA query performance and indexing, reducing database latency <span class="hl-action">by 30%</span>.
@@ -769,6 +774,22 @@
                   d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zM88.5 82.4c-.4 4.3-2.4 7.6-6.1 9.9-2.8 1.8-6 2.6-9.3 2.9-3.5.3-6.9-.1-10.1-1.4-.5-.2-1-.4-1.4-.7-.1-.1-.3-.2-.5-.4l.1 2.4h-8.3V94.6c0-.2 0-.4-.1-.6l-2.9-15.9c-.1-.5-.2-1-.4-1.4-.2-.4-.5-.7-.9-.8-.4-.1-.9 0-1.3.2-.6.3-1.1.7-1.5 1.3l.9 4.8h-9l-2.5-13.7c.3-.4.6-.8.9-1.2 1.6-2.1 3.4-3.9 5.5-5.4 1.9-1.3 3.9-2.2 6.1-2.4 1.9-.2 3.9 0 5.7.7 1.5.6 2.8 1.5 3.7 2.7.9 1.2 1.4 2.7 1.5 4.2.1 1.7-.2 3.3-1 4.8l1.1 6.2c.4-2.1 1.2-4 2.4-5.7 1.8-2.6 4.2-4.4 7.1-5.4 2.7-.9 5.5-.9 8.2-.1 2.4.7 4.4 2.1 5.9 4.1 1.5 1.9 2.2 4.2 2.2 6.6z" />
               </svg>
               SCSS
+            </span>
+            <span class="tech-pill">
+              <svg viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="aws1" x1="0.5" y1="0" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+                    <stop offset="0" stop-color="#FF9900" />
+                    <stop offset="1" stop-color="#FFB84D" />
+                  </linearGradient>
+                </defs>
+                <!-- Hình khối mô phỏng logo AWS -->
+                <path d="M48 10L10 30V66L48 86L86 66V30L48 10Z" fill="url(#aws1)" />
+                <path d="M25 55C35 62 55 65 72 55" stroke="white" stroke-width="6" stroke-linecap="round" />
+                <path d="M65 52L72 56L68 62" stroke="white" stroke-width="5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              AWS
             </span>
             <!-- .NET / C# -->
             <!-- <span class="tech-pill"><svg viewBox="0 0 128 128" fill="none">
@@ -844,13 +865,16 @@
 
           <ul class="exp-bullets">
             <li>
-              Migrated legacy systems to <span class="hl-action">.NET 6</span>, improving performance, security, and long-term maintainability.
+              Wrote and maintained <span class="hl-action">YAML-based deployment configurations</span> for dev/test environments, deploying via <span class="hl-action">Azure DevOps</span> as
+part of a <span class="hl-action">.NET 6</span> legacy system migration project.
             </li>
             <li>
-              Automated CI/CD pipelines with <span class="hl-action">Azure DevOps</span>, standardizing deployments and reducing manual errors.
+              Performed <span class="hl-action">Black Box Testing</span> via Postman to validate API responses after each deployment, ensuring functional
+correctness before release.
             </li>
             <li>
-              Ensured system reliability through <span class="hl-action">regression testing and root-cause analysis</span>, proactively preventing production issues.
+              Conducted <span class="hl-action">Regression Testing (C#)</span> on newly deployed applications to verify compatibility with existing systems,
+identifying and fixing bugs to prevent integration issues.
             </li>
           </ul>
 
@@ -983,7 +1007,7 @@
               <p class="acad-desc">A gamified e-learning platform featuring course marketplaces, personalized learning paths, and interactive reward systems.</p>
               <ul class="acad-bullets">
                 <li>
-                  Architected a Clean Architecture backend with OAuth 2.0/JWT for a gamified e-learning platform featuring a course marketplace, instructor content-approval workflow, and a mascot-based reward system.
+                  Architected a Clean Architecture backend with OAuth 2.0/JWT across 40+ API endpoints for a gamified e-learning platform featuring a course marketplace, instructor content-approval workflow, and a mascot-based reward system.
                 </li>
                <li>
                 Applied Redis caching (cache-aside pattern) for course catalog and leaderboard queries, cutting response latency from ~200ms to ~60-80ms.
@@ -1128,7 +1152,8 @@
                   Enforced booking correctness under concurrent access using a database-level unique constraint combined with transactional booking logic, preventing double-booking on the same lecturer time slot.
                 </li>
                 <li>
-                  Integrated RabbitMQ to decouple email notifications from the request flow, reducing appointment-confirmation response latency from ~3-5s to under 500ms.
+                  Integrated RabbitMQ to decouple email notifications from the request flow - rendering confirmation emails with
+Thymeleaf templates - reducing appointment-confirmation response latency from ~3-5s to under 500ms.
                 </li>
                 <li>Secured the platform with OAuth 2.0 (Google SSO); deployed on AWS (EC2/RDS) via Docker.</li>
                 <li>
